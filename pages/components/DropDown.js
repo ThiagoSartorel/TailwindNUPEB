@@ -13,9 +13,7 @@ export default function DropDown() {
                 <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
                 <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
                 <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
-                <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
-                <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
-                <a className="w-full text-sm text-gray-500 px-3 bg-white hover:bg-gray-300" href="">Link 1</a>
+         
             </div>
         </div>
     )
