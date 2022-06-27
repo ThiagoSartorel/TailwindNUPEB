@@ -2,6 +2,7 @@ import GridNoticia from "./components/GridNoticia"
 import DropDown from "./components/DropDown"
 import Carousel from "./components/Carousel"
 
+
 export default function Home() {
   return (
     <>
@@ -9,7 +10,7 @@ export default function Home() {
 
       <DropDown />
       <GridNoticia />
-      <Carousel />
+
 
     </div>
     </>

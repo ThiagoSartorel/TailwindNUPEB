@@ -1,10 +1,10 @@
 export default function Menu() {
     return (
         <div>
-            <nav className="bg-orange-300 sm:text-base lg:text-xl xl:text-xl text-white font-mono font-semibold text-lg">
+            <nav className="bg-orange-300 h-14 w-full flex flex-nowrap items-center text-white font-mono font-semibold p-4">
                 <div className="font-sans">
-                    <div className="absolute object-left p-4">
-                        <a href="/" className="">
+                    <div className="absolute object-left p-6">
+                        <a href="/" className="flex">
                             <img src="LogoCompleta.png" className="h-10 inline" />
                         </a>
                     </div>
