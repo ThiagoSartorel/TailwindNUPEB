@@ -10,44 +10,50 @@ export default function Menu() {
                     </div>
                     <ul className="flex items-stretch space-x-4 p-8 justify-end text-center flex-col md:flex-row ">
                         <li>
-                            <a href="/" className="hover:text-orange-900">
+                            <a href="/" className="hover:text-blue-900">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="/informe-se" className="hover:text-orange-900">
+                            <a href="/informe-se" className="hover:text-blue-900">
                                 Informe-se
                             </a>
                         </li>
                         <li>
-                            <a href="/pesquisa" className="hover:text-orange-900">
+                            <a href="/pesquisa" className="hover:text-blue-900">
                                 Pesquisa
                             </a>
                         </li>
                         <li>
-                            <a href="/agenda" className="hover:text-orange-900">
+                            <a href="/agenda" className="hover:text-blue-900">
                                 Agenda
                             </a>
                         </li>
                         <li>
-                            <a href="/noticias" className="hover:text-orange-900">
+                            <a href="/noticias" className="hover:text-blue-900">
                                 Blog
                             </a>
                         </li>
                         <li>
-                            <a href="/indicacoes" className="hover:text-orange-900">
+                            <a href="/indicacoes" className="hover:text-blue-900">
                                 Indicações
                             </a>
                         </li>
                         <li>
-                            <a href="/labin" className="hover:text-orange-900">
+                            <a href="/labin" className="hover:text-blue-900">
                                 LABIN
                             </a>
                         </li>
                         <li>
-                            <a href="/contato" className="hover:text-orange-900">
+                            <a href="/contato" className="hover:text-blue-900">
                                 Contato
                             </a>
+                        </li>
+                        <li>
+                            <a className="hover:text-blue-900" href="Login">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                </svg></a>
                         </li>
                     </ul>
                     <div className="hover:text-orange-900">
