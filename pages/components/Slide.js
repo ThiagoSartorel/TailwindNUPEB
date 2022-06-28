@@ -53,7 +53,7 @@ export default function Slider() {
   };
 
   return (
-    <div ref={slideRef} className="w-full select-none relative">
+    <div ref={slideRef} className="w-full select-none relative drop-shadow-xl ">
       <div className="aspect-w-16 aspect-h-9">
         <img src={featuredProducts[currentIndex]} alt="" className="w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
       </div>
