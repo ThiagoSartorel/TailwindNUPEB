@@ -1,0 +1,209 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { Fragment, useState } from 'react';
+import Logo from '../../public/LogoCompleta.png';
+import { Menu, Transition } from '@headlessui/react';
+import { BsPerson, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useSession, signIn, signOut } from 'next-auth/react';
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
+
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+
+  // console.log(session);
+
+  return (
+    <div className='fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#cf8757] mb-[2px] z-10'>
+      {/* Left Side */}
+      <div className='flex grow items-center justify-start'>
+        <Link href='/'>
+          <a className='flex'>
+            <Image
+              src={Logo}
+              alt='/'
+              width='80'
+              height='36'
+              className='cursor-pointer z-10'
+            />
+          </a>
+        </Link>
+        <div className='p-4'>
+          <Menu as='div' className='relative text-left'>
+            <div className='flex'>
+              <Menu.Button>
+                <BsThreeDotsVertical size={20} />
+              </Menu.Button>
+            </div>
+
+            <Transition
+              as={Fragment}
+              enter='transition ease-out duration-100'
+              enterFrom='transform opacity-0 scale-95'
+              enterTo='transform opacity-100 scale-100'
+              leave='transition ease-in duration-75'
+              leaveFrom='transform opacity-100 scale-100'
+              leaveTo='transform opacity-0 scale-95'
+            >
+              <Menu.Items className='origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-[#ffffff] ring-1 ring-white ring-opacity-5 focus:outline-none'>
+                <div className='py-1'>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href='#'
+                        className={classNames(
+                          active
+                            ? 'bg-gray-500 text-gray-100'
+                            : 'text-gray-200',
+                          'block px-4 py-2 text-sm'
+                        )}
+                      >
+                        Settings
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href='#'
+                        className={classNames(
+                          active
+                            ? 'bg-gray-500 text-gray-100'
+                            : 'text-gray-200',
+                          'block px-4 py-2 text-sm'
+                        )}
+                      >
+                        Support
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href='#'
+                        className={classNames(
+                          active
+                            ? 'bg-gray-500 text-gray-100'
+                            : 'text-gray-200',
+                          'block px-4 py-2 text-sm'
+                        )}
+                      >
+                        License
+                      </a>
+                    )}
+                  </Menu.Item>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
+        </div>
+      </div>
+
+      {/* Right Side */}
+      <div className='hidden md:flex grow items-center justify-end'>
+        <div className='flex items-center'>
+          <ul className="w-full flex space-x-4">
+            <li>
+              <a href="/" className="hover:text-white">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/informe-se" className="hover:text-white">
+                Informe-se
+              </a>
+            </li>
+            <li>
+              <a href="/pesquisa" className="hover:text-white">
+                Pesquisa
+              </a>
+            </li>
+            <li>
+              <a href="/agenda" className="hover:text-white">
+                Agenda
+              </a>
+            </li>
+            <li>
+              <a href="/noticias" className="hover:text-white">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="/indicacoes" className="hover:text-white">
+                Indicações
+              </a>
+            </li>
+            <li>
+              <a href="/labin" className="hover:text-white">
+                LABIN
+              </a>
+            </li>
+            <li>
+              <a href="/contato" className="hover:text-white">
+                Contato
+              </a>
+            </li>
+            <li >
+              <a href="/Login" className="hover:text-white ">
+                <BsPerson size={30} />
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      {/* Hamburger Menu */}
+      <div onClick={handleNav} className='block md:hidden z-10 cursor-pointer'>
+        {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={
+          nav
+            ? 'md:hidden fixed top-0 left-0 w-full h-screen bg-[#cf8757] flex justify-center items-center ease-in duration-300'
+            : 'md:hidden fixed top-[-100%] left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center ease-in duration-300'
+        }
+      >
+        <ul className='text-center'>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/'>Home</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/#live'>Informe-se</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/#categories'>Pesquisa</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/account'>Agenda</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/account'>Blog</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/account'>Indicações</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/account'>Labin</Link>
+          </li>
+          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+            <Link href='/account'>Contato</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

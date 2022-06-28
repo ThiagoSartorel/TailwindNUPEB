@@ -1,14 +1,14 @@
 export default function Menu() {
     return (
-        <div>
-            <nav className="bg-orange-300 h-14 w-full flex flex-nowrap items-center text-white font-mono font-semibold p-4">
+        <div >
+            <div className="absolute object-left pl-4 pt-2">
+                <a href="/" className="flex">
+                    <img src="LogoCompleta.png" className="h-10 inline" />
+                </a>
+            </div>
+            <nav className="bg-orange-300 h-14 w-full flex flex-nowrap items-center justify-end text-white font-mono font-semibold p-4">
                 <div className="font-sans">
-                    <div className="absolute object-left p-6">
-                        <a href="/" className="flex">
-                            <img src="LogoCompleta.png" className="h-10 inline" />
-                        </a>
-                    </div>
-                    <ul className="flex items-stretch space-x-4 p-8 justify-end text-center flex-col md:flex-row ">
+                    <ul className="w-full flex space-x-4">
                         <li>
                             <a href="/" className="hover:text-blue-900">
                                 Home

@@ -1,7 +1,7 @@
 export default function Login() {
   return (
     <>
-      <div className=" mt-32 w-screen flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center min-h-screen">
         <h2 className="text-lg font-bold text-center mb-4">Área de acesso Administrativo</h2>
         <div className="bg-gray-200 shadow-sm shadow-gray-500 rounded-md p-4">
           <div>
