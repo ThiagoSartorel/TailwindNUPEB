@@ -3,9 +3,9 @@ import Noticias from "../../bd/Noticias";
 
 export default function Post() {
     return (
-        <div className="container mx-auto grid px-4 py-8">
+        <div className="container mx-auto grid px-2">
             
-            <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
+            <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
                     <h4 className="font-semibold text-center text-2xl">Titulo do card</h4>
 

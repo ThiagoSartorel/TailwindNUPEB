@@ -22,7 +22,7 @@ const Navbar = () => {
   // console.log(session);
 
   return (
-    <div className='fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#f7a439] mb-[2px] z-10 text-base'>
+    <div className='fixed h-14 w-full flex flex-nowrap items-center p-7 bg-[#f7a439] mb-[2px] z-10 text-lg'>
       {/* Left Side */}
       <div className='flex grow items-center justify-start'>
         <Link href='/'>
@@ -171,34 +171,34 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'md:hidden fixed top-0 left-0 w-full h-screen bg-[#cf8757] flex justify-center items-center ease-in duration-300'
+            ? 'md:hidden fixed top-0 left-0 w-full h-screen bg-[#f7a439] flex justify-center items-center ease-in duration-300'
             : 'md:hidden fixed top-[-100%] left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center ease-in duration-300'
         }
       >
         <ul className='text-center'>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
             <Link href='/'>Home</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/#live'>Informe-se</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/informese'>Informe-se</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/#categories'>Pesquisa</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/pesquisa'>Pesquisa</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/account'>Agenda</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/agenda'>Agenda</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/account'>Blog</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/noticias'>Blog</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/account'>Indicações</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/indicacoes'>Indicações</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/account'>Labin</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/labin'>Labin</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-3xl font-semibold text-white'>
-            <Link href='/account'>Contato</Link>
+          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+            <Link href='/contato'>Contato</Link>
           </li>
         </ul>
       </div>
