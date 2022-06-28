@@ -22,7 +22,7 @@ const Navbar = () => {
   // console.log(session);
 
   return (
-    <div className='fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#cf8757] mb-[2px] z-10'>
+    <div className='fixed h-14 w-full flex flex-nowrap items-center p-4 bg-[#f7a439] mb-[2px] z-10 text-base'>
       {/* Left Side */}
       <div className='flex grow items-center justify-start'>
         <Link href='/'>
