@@ -2,8 +2,8 @@ export default function Login() {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h2 className="text-lg font-bold text-center mb-4">Área de acesso Administrativo</h2>
-        <div className="bg-gray-200 shadow-sm shadow-gray-500 rounded-md p-4">
+        <h2 className="text-lg font-semibold text-center mb-6">Área de acesso Administrativo</h2>
+        <div className="bg-gray-100 shadow-md shadow-gray-300 rounded-md p-4">
           <div>
             <label htmlFor="Login" className="text-sm text-gray-700 mb-1">Login</label>
             <input type="text" id="Login" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md"></input>

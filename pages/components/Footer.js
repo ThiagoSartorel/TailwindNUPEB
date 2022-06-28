@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-white text-center lg:text-left text-base">
       <div
-        className="text-gray-700 text-center p-4 "
+        className="text-gray-700 text-center p-3 "
       >
         © Copyright: 
         <a className="text-gray-800" href="https://tailwind-elements.com/">
