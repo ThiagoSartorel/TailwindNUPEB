@@ -1,7 +1,19 @@
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-    @apply bg-gray-200 text-black scroll-smooth
+  @apply bg-gray-200 text-black scroll-smooth;
 }

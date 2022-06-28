@@ -4,9 +4,9 @@ export default function Footer() {
       <div
         className="text-gray-700 text-center p-4 "
       >
-        © 2021 Copyright: 
+        © Copyright: 
         <a className="text-gray-800" href="https://tailwind-elements.com/">
-          {"</NIU>"}
+          {" </NIU>"}
         </a>
       </div>
     </footer>

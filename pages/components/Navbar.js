@@ -152,7 +152,7 @@ const Navbar = () => {
               </a>
             </li>
             <li >
-              <a href="/Login" className="hover:text-white ">
+              <a href="/login" className="hover:text-white ">
                 <BsPerson size={30} />
               </a>
             </li>
