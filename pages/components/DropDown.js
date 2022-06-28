@@ -4,8 +4,8 @@ export default function DropDown() {
         <div className="relative group">
             <button className="flex item-center text-sm bg-gray-200 border:border-gray-300 hover:bg-blue-200 px-6 py-2 rounded shadow">
                 Ola
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
             <div className="absolute hidden group-hover:flex flex-col w-48 bg-white border border-gray-300 py-1 shadow-md rounded-md">
