@@ -147,7 +147,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="/contato" className="hover:text-white">
+              <a href="/contact" className="hover:text-white">
                 Contato
               </a>
             </li>
@@ -198,7 +198,7 @@ const Navbar = () => {
             <Link href='/labin'>Labin</Link>
           </li>
           <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
-            <Link href='/contato'>Contato</Link>
+            <Link href='/contact'>Contato</Link>
           </li>
         </ul>
       </div>

@@ -12,9 +12,10 @@ export default function Login() {
           <div>
             <label htmlFor="Senha" className="text-sm text-gray-700 mb-1">Senha</label>
             <input type="password" id="Senha" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md"></input>
+            
           </div>
           <div className="">
-          <button className="w-full mt-2 text-sm bg-orange-300 p-1 px-2 rounded-md text-black hover:bg-orange-400">Entrar</button>
+          <button className="h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-slate-300 hover:text-neutral-600">Entrar</button>
           </div>
         </div>
       </div>
