@@ -8,6 +8,7 @@ export default function Post() {
             <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
                     <h4 className="font-semibold text-center text-2xl">Titulo do card</h4>
+                    <p className="text-gray-500 text-end text-sm">24/06/2022</p>
 
                 </div>
                 <div>
@@ -17,8 +18,7 @@ export default function Post() {
                     Conteudo
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
-                    <span className="text-gray-500 absolute text-sm">by fulano</span>
-                    <p className="text-gray-500 text-end text-sm">24/06/2022</p>
+                    <span className="text-gray-500 text-sm">by fulano</span>                 
                 </div>
             </div>
         </div>

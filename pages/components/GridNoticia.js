@@ -1,5 +1,5 @@
 import Noticias from "../../bd/Noticias";
-
+console.log(Noticias)
 
 export default function GridNoticia() {
     return (

@@ -1,3 +1,3 @@
 export const Noticias = (
-    {"noticias":{"id":"1", "Titulo":"Noticia 1"}}
+    {"noticias":{"id":"1", "titulo":"Noticia 1", "conteudo":"teste"}}
 );
