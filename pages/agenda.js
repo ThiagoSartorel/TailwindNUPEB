@@ -5,11 +5,11 @@ export default function Calendario() {
   return (
     <div id='contact' className='w-full min-h-screen '>
       <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
-        <p className='text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] py-4'>
+        <p className='titulo-principal'>
           Agenda
         </p>
         <div className="shadow-lg">
-          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b w-full">
+          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b w-full rounded-lg">
             <div className="flex flex-row">
               <div className="flex-none mt-1">
                 <label className='px-4 pr-4'>Buscar</label>

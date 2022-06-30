@@ -24,3 +24,11 @@ html {
 input, textarea {
   @apply bg-gray-100
 }
+
+.titulo-principal{
+  @apply text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] py-8
+}
+
+.btn-submit{
+  @apply bg-slate-50 h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600
+}

@@ -12,7 +12,7 @@ export default function Home() {
       </div>
 
       <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8">
-        <div className="text-center py-10 text-[3rem] font-bold text-3xl tracking-widest uppercase text-[#f7a439]">
+        <div className="titulo-principal">
           <h1>Últimas notícias</h1>
         </div>
         <GridNoticia />

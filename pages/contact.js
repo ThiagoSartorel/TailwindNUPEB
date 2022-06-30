@@ -8,12 +8,22 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
 const copyToClipboardEmail = () => {
   navigator.clipboard.writeText("nupebuniplac@gmail.com");
-  document.getElementById("emailNupeb").innerHTML = "nupebuniplac@gmail.com"
+  document.getElementById("emailNupeb").innerHTML = "Copiado"
+  setTimeout(redefineEmail, 2000);
 };
+
+async function redefineEmail(){
+  document.getElementById("emailNupeb").innerHTML = "nupebuniplac@gmail.com";
+}
+
+async function redefineNumero(){
+  document.getElementById("numeroNupeb").innerHTML = "(49) 3251-1108";
+}
 
 const copyToClipboardNumber = () => {
   navigator.clipboard.writeText("49 3251 1108");
-  document.getElementById("numeroNupeb").innerHTML = "(49) 3251-1108"
+  document.getElementById("numeroNupeb").innerHTML = "Copiado"
+  setTimeout(redefineNumero, 2000)
 };
 
 
@@ -36,7 +46,7 @@ const Contact = () => {
   return (
     <div id='contact' className='w-full min-h-screen '>
       <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
-        <p className='text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] py-4'>
+        <p className='titulo-principal'>
           Contato
         </p>
 
@@ -64,20 +74,20 @@ const Contact = () => {
               <div>
                 <p className='uppercase pt-8 '>Redes sociais</p>
                 <div className='flex items-center justify-between space-between py-4'>
-                  <div className='group'>
+                <div className='group'>
                     <a
-                      href='https://www.facebook.com/nupeb/'
+                      onClick={copyToClipboardNumber}
                       target='_blank'
                       rel='noreferrer'
                     >
 
                       <div className='rounded-full shadow-lg bg-slate-50 shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange-300 ease-in duration-300'>
-                        <FaFacebook />
+                        <BsFillPersonLinesFill />
                       </div>
 
                     </a>
-                    <div className="absolute hidden mt-4 w-40 group-hover:inline-block">
-                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm'>@nupeb</span>
+                    <div className="absolute mt-4 w-40 group-hover:inline-block hidden">
+                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm' id="numeroNupeb">(49) 3251-1108</span>
                     </div>
                   </div>
 
@@ -93,25 +103,23 @@ const Contact = () => {
 
                     </a>
                     <div className="absolute hidden mt-4 w-40 group-hover:inline-block">
-                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm group-active:bg-green-700' id="emailNupeb">nupebuniplac@gmail.com</span>
+                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm' id="emailNupeb">nupebuniplac@gmail.com</span>
                     </div>
                   </div>
                   <div className='group'>
                     <a
-                      onClick={copyToClipboardNumber}
+                      href='https://www.facebook.com/nupeb/'
                       target='_blank'
                       rel='noreferrer'
                     >
 
                       <div className='rounded-full shadow-lg bg-slate-50 shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange-300 ease-in duration-300'>
-                        <BsFillPersonLinesFill />
+                        <FaFacebook />
                       </div>
 
                     </a>
-                    <div className="absolute mt-4 w-40 group-hover:inline-block tras">
-                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm group-active:bg-green-700 ' id="numeroNupeb">(49) 3251-1108</span>
-                    </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -179,7 +187,7 @@ const Contact = () => {
                     onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                 </div>
-                <button className="bg-slate-50 h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600">Enviar</button>
+                <button className="btn-submit">Enviar</button>
 
               </form>
             </div>
