@@ -3,8 +3,19 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebook } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+
+const copyToClipboardEmail = () => {
+  navigator.clipboard.writeText("nupebuniplac@gmail.com");
+  document.getElementById("emailNupeb").innerHTML = "nupebuniplac@gmail.com"
+};
+
+const copyToClipboardNumber = () => {
+  navigator.clipboard.writeText("49 3251 1108");
+  document.getElementById("numeroNupeb").innerHTML = "(49) 3251-1108"
+};
+
 
 
 const Contact = () => {
@@ -28,7 +39,7 @@ const Contact = () => {
         <p className='text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] py-4'>
           Contato
         </p>
-       
+
         <div className='grid lg:grid-cols-5 gap-8'>
           {/* left */}
           <div className='col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 rounded-xl p-4 bg-slate-300'>
@@ -49,38 +60,58 @@ const Contact = () => {
                   Ficaremos felizes em responder sua solicitação, obrigada pelo contato!
                 </p>
               </div>
-              <div>
-                <p className='uppercase pt-8'>Redes sociais</p>
-                <div className='flex items-center justify-between py-4'>
-                  <a
-                    href='https://www.linkedin.com/in/clint-briley-50056920a/'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href='https://github.com/fireclint'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaGithub />
-                    </div>
-                  </a>
 
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <AiOutlineMail />
+              <div>
+                <p className='uppercase pt-8 '>Redes sociais</p>
+                <div className='flex items-center justify-between space-between py-4'>
+                  <div className='group'>
+                    <a
+                      href='https://www.facebook.com/nupeb/'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+
+                      <div className='rounded-full shadow-lg bg-slate-50 shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange-300 ease-in duration-300'>
+                        <FaFacebook />
+                      </div>
+
+                    </a>
+                    <div className="absolute hidden mt-4 w-40 group-hover:inline-block">
+                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm'>@nupeb</span>
+                    </div>
                   </div>
-                  <Link href='/resume'>
-                    <a>
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+
+
+                  <div className='group'>
+                    <a
+                      onClick={copyToClipboardEmail}
+                    >
+
+                      <div className='rounded-full shadow-lg bg-slate-50 shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange-300 ease-in duration-300'>
+                        <AiOutlineMail />
+                      </div>
+
+                    </a>
+                    <div className="absolute hidden mt-4 w-40 group-hover:inline-block">
+                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm group-active:bg-green-700' id="emailNupeb">nupebuniplac@gmail.com</span>
+                    </div>
+                  </div>
+                  <div className='group'>
+                    <a
+                      onClick={copyToClipboardNumber}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+
+                      <div className='rounded-full shadow-lg bg-slate-50 shadow-gray-400 p-6 cursor-pointer hover:scale-110 hover:bg-orange-300 ease-in duration-300'>
                         <BsFillPersonLinesFill />
                       </div>
+
                     </a>
-                  </Link>
+                    <div className="absolute mt-4 w-40 group-hover:inline-block tras">
+                      <span className='bg-gray-800 px-2 py-1 text-white rounded-md text-sm group-active:bg-green-700 ' id="numeroNupeb">(49) 3251-1108</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -149,7 +180,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <button className="bg-slate-50 h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600">Enviar</button>
-                  
+
               </form>
             </div>
           </div>

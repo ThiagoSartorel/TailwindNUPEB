@@ -20,3 +20,7 @@
 html {
   @apply bg-gray-200 text-black scroll-smooth font-[rubik];
 }
+
+input, textarea {
+  @apply bg-gray-100
+}
