@@ -11,7 +11,7 @@ export default function Home() {
         <Slider />
       </div>
 
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-24">
       <div className="texto-basico">
             <h2 className="titulo-principal">Sobre nós</h2>
             <br></br>
@@ -31,7 +31,7 @@ export default function Home() {
         <div className="titulo-principal">
           <h1>Últimas notícias</h1>
         </div>
-        <GridNoticia />
+        <GridNoticia/>
       </div>
     </>
   );

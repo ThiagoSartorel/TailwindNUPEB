@@ -1,4 +1,5 @@
 import Post from "./components/Post";
+import { FaFilter } from 'react-icons/fa';
 
 export default function Noticias() {
   return (
@@ -16,6 +17,16 @@ export default function Noticias() {
         </svg>
       </div>
       <div>
+        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 pr-4">
+        <FaFilter className="my-2"/>
+          <select className="rounded-md px-2 py-1">
+            <option disabled defaultChecked>Filtro</option>
+            <option>Noticias</option>
+            <option>Eventos</option>
+            <option>Palestras</option>
+          </select>
+          
+        </div>
         <Post />
       </div>
     </div>
