@@ -5,7 +5,7 @@ export default function Noticias() {
     <div className="min-h-screen pt-14 mb-16 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
         <div className="absolute tracking-widest items-center w-full text-md sm:pt-10 sm:text-6xl md:pt-20 md:text-8xl xl:pt-40 xl:text-8xl">
-          <h1 className="text-center animate-pulse">B L O G</h1>
+          <h1 className="text-center">B L O G</h1>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
