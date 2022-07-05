@@ -45,7 +45,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='w-full min-h-screen '>
-      <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
+      <div className='sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12'>
         <p className='titulo-principal'>
           Contato
         </p>
