@@ -7,6 +7,9 @@ export default function Noticias() {
       <div>
         <h1 className="titulo-principal">Perfil Autor</h1>
       </div>
+
+
+
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function Home() {
       <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12">
       <div className="texto-basico">
 
-      <h2 className="titulo-principal">Linhas de Pesquisa:</h2>
+      <h2 className="titulo-principal">Linhas de Pesquisa</h2>
       <br></br>
       <h3>Pedagogia da Infância, Políticas e Diferenças</h3>
       <u>Objetivo:</u>
