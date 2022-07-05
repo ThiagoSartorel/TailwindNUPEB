@@ -8,7 +8,8 @@ export default function GridNoticia() {
             
             <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
-                    <h4 className="font-semibold">Titulo do card</h4>
+                    <h4 className="font-semibold text-lg">Titulo do card</h4>
+                    <a href="/perfil_autor" className="font-thin">Autor</a>
 
                 </div>
                 <div>
@@ -18,14 +19,14 @@ export default function GridNoticia() {
                     Conteudo
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
-                    <button className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</button>
+                   <a href="/noticia_evento" className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</a>
                     <p className="text-gray-500 text-end mt-2 text-sm">24/06/2022</p>
                 </div>
             </div>
-
             <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
-                    <h4 className="font-semibold">Titulo do card</h4>
+                    <h4 className="font-semibold text-lg">Titulo do card</h4>
+                    <a href="/perfil_autor" className="font-thin">Autor</a>
 
                 </div>
                 <div>
@@ -35,27 +36,30 @@ export default function GridNoticia() {
                     Conteudo
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
-                    <button className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</button>
+                   <a href="/noticia_evento" className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</a>
                     <p className="text-gray-500 text-end mt-2 text-sm">24/06/2022</p>
                 </div>
             </div>
-
             <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
-                <div className="w-full bg-gray-100 p-2 border-b border-gray-00">
-                    <h4 className="font-semibold">Titulo do card</h4>
+                <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
+                    <h4 className="font-semibold text-lg">Titulo do card</h4>
+                    <a href="/perfil_autor" className="font-thin">Autor</a>
 
                 </div>
                 <div>
-                    <img src="https://source.unsplash.com/1920x1080/?study" className=""></img>
+                    <img src="https://source.unsplash.com/1920x1080/?book" className=""></img>
                 </div>
                 <div className="p-4 bg-slate-200">
                     Conteudo
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
-                    <button className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</button>
+                   <a href="/noticia_evento" className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute">Saiba mais</a>
                     <p className="text-gray-500 text-end mt-2 text-sm">24/06/2022</p>
                 </div>
             </div>
+            
+
+
         </div>
     )
 }

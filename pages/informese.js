@@ -28,9 +28,7 @@ export default function Home() {
           <h3>Produçoes;</h3>
         </div>
       </div>
-      <div className="titulo-principal">
-        <h1>Últimas notícias</h1>
-      </div>
+
     </>
   );
 }

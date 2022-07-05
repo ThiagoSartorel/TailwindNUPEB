@@ -23,7 +23,6 @@ export default function Noticias() {
             <option disabled defaultChecked>Filtro</option>
             <option>Noticias</option>
             <option>Eventos</option>
-            <option>Palestras</option>
           </select>
           
         </div>
