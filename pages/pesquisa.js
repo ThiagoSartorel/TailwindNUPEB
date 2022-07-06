@@ -93,6 +93,7 @@ export default function Home() {
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas em andamento
                 </h2>
+                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
                 <p className="text-gray-600 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   posuere porta iaculis. Morbi tempus ante tellus, sit amet
@@ -104,7 +105,59 @@ export default function Home() {
                   eros, non luctus massa. Vestibulum porttitor lobortis massa,
                   et ultrices mi semper quis. Pellentesque consequat facilisis
                   ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
                 </p>
+                </div>
+
               </div>
             </div>
           </div>
@@ -114,6 +167,7 @@ export default function Home() {
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas concluídas
                 </h2>
+                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
                 <p className="text-gray-600 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   posuere porta iaculis. Morbi tempus ante tellus, sit amet
@@ -124,10 +178,59 @@ export default function Home() {
                   purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
                   eros, non luctus massa. Vestibulum porttitor lobortis massa,
                   et ultrices mi semper quis. Pellentesque consequat facilisis
-                  ex, id ullamcorper neque efficitur at. Nam egestas, neque
-                  consectetur lacinia hendrerit, nibh diam lobortis sem, nec
-                  porttitor tortor sem sed risus.
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  posuere porta iaculis. Morbi tempus ante tellus, sit amet
+                  blandit enim condimentum ac. Fusce sagittis maximus nisl et
+                  consectetur. Cras non mattis elit. Mauris semper maximus
+                  massa, non posuere sem imperdiet ut. Morbi non justo nunc.
+                  Morbi congue, tellus ac aliquam congue, mi mi ullamcorper
+                  purus, eget pulvinar est mauris nec ipsum.Proin a vehicula
+                  eros, non luctus massa. Vestibulum porttitor lobortis massa,
+                  et ultrices mi semper quis. Pellentesque consequat facilisis
+                  ex, id ullamcorper neque efficitur at.
                 </p>
+                </div>
               </div>
             </div>
           </div>
