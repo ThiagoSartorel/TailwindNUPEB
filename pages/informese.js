@@ -16,14 +16,14 @@ export default function Home() {
 
 
           <section id="cards-about">
-            <div className="flex flex-wrap py-2 px-2 w-full">
+            <div className="flex flex-wrap px-2 w-full">
               <div className="w-full sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
                 <div className="w-full rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Sobre nós
                   </h2>
-                  <div className="text-gray-600 text-lg">
-                    <br></br>
+                  <div className="text-gray-600 text-base py-2">
+                 
                     <h3>Grupos de Estudos</h3>
                     <ul>Objetivo:</ul>
                     <ul>Como participar:</ul>
@@ -54,17 +54,20 @@ export default function Home() {
               <div className="w-full sm:w-full lg:w-1/2 px-4 py-2 flex items-center order-1 lg:order-2">
                 <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
-                    Missão, visão e valores
+                    Objetivos
                   </h2>
-                  <div className="text-gray-600 text-lg">
+                  <div className="text-gray-600 text-base">
+                  <p className="text-gray-600 text-base py-2">
+                  Pesquisar políticas para a Educação Básica e suas relações com os processos formativos na escola, levando em consideração os fundamentos teóricos envolvidos na elaboração, implementação, avaliação, resistências e redefinição das políticas educacionais. 
+                  </p>
                     <br></br>
-                    <h3>Missão</h3>
+                    <h3>Missão:</h3>
                  
                     <br></br>
-                    <h3>Visão</h3>
+                    <h3>Visão:</h3>
             
                     <br></br>
-                    <h3>Valores</h3>
+                    <h3>Valores:</h3>
                  
                   </div>
                 </div>
@@ -78,31 +81,9 @@ export default function Home() {
               <div className="w-full sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
                 <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
-                    Objetivos
+                  Projetos 
                   </h2>
-                  <p className="text-gray-600 text-lg">
-                  Pesquisar políticas para a Educação Básica e suas relações com os processos formativos na escola, levando em consideração os fundamentos teóricos envolvidos na elaboração, implementação, avaliação, resistências e redefinição das políticas educacionais. 
-                  </p>
-                </div>
-              </div>
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap py-2 px-2">
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center lg:order-1 order-2">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
-                </div>
-              </div>
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center order-1 lg:order-2">
-                <div className="rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
-                  <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
-                    Pesquisas
-                  </h2>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-gray-600 text-base py-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec posuere porta iaculis. Morbi tempus ante tellus, sit
                     amet blandit enim condimentum ac. Fusce sagittis maximus
@@ -113,54 +94,24 @@ export default function Home() {
                     a vehicula eros, non luctus massa. Vestibulum porttitor
                     lobortis massa, et ultrices mi semper quis. Pellentesque
                     consequat facilisis ex, id ullamcorper neque efficitur at.
-                    Nam egestas, neque consectetur lacinia hendrerit, nibh diam
-                    lobortis sem, nec porttitor tortor sem sed risus.
                   </p>
+              
+                  
+                </div>
+              </div>
+              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
+                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
+                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
                 </div>
               </div>
             </div>
-          </section>
-
-
-          <section id="cards-about">
             <div className="flex flex-wrap py-2 px-2 ">
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
-                <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
-                  <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
-                    Projetos
-                  </h2>
-                  <p className="text-gray-600 text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec posuere porta iaculis. Morbi tempus ante tellus, sit
-                    amet blandit enim condimentum ac. Fusce sagittis maximus
-                    nisl et consectetur. Cras non mattis elit. Mauris semper
-                    maximus massa, non posuere sem imperdiet ut. Morbi non justo
-                    nunc. Morbi congue, tellus ac aliquam congue, mi mi
-                    ullamcorper purus, eget pulvinar est mauris nec ipsum.Proin
-                    a vehicula eros, non luctus massa. Vestibulum porttitor
-                    lobortis massa, et ultrices mi semper quis. Pellentesque
-                    consequat facilisis ex, id ullamcorper neque efficitur at.
-                  </p>
-                </div>
-              </div>
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-wrap py-2 px-2">
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center lg:order-1 order-2">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
-                </div>
-              </div>
               <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center order-1 lg:order-2">
                 <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Produções
                   </h2>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-gray-600 text-base py-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec posuere porta iaculis. Morbi tempus ante tellus, sit
                     amet blandit enim condimentum ac. Fusce sagittis maximus
@@ -171,13 +122,17 @@ export default function Home() {
                     a vehicula eros, non luctus massa. Vestibulum porttitor
                     lobortis massa, et ultrices mi semper quis. Pellentesque
                     consequat facilisis ex, id ullamcorper neque efficitur at.
-                    Nam egestas, neque consectetur lacinia hendrerit, nibh diam
-                    lobortis sem, nec porttitor tortor sem sed risus.
                   </p>
+                </div>
+              </div>
+              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
+                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
+                  <img className="w-full min-h-[450px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
                 </div>
               </div>
             </div>
           </section>
+
 
           <br></br>
         </div>
