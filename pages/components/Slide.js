@@ -75,3 +75,13 @@ export default function Slider() {
     </div>
   );
 }
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+
+  var banner = await axios.get('http://172.16.248.88:3333/banners')
+  console.log(banner);
+
+  // Pass data to the page via props
+  return { props: { ne, dataNoticia } }
+}

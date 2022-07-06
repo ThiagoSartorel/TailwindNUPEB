@@ -156,7 +156,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-wrap py-2 px-2 ">
-              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center order-1 lg:order-2">
+              <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center order-0 lg:order-2">
                 <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Produções
@@ -188,7 +188,7 @@ export default function Home() {
               </div>
               <div className="sm:w-full lg:w-1/2 px-4 py-2 flex items-center">
                 <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[400px]" src="https://source.unsplash.com/1920x1080/?book" alt="" />
+                  <img className="w-full min-h-[400px]" src="https://source.unsplash.com/1920x1080/?car" alt="" />
                 </div>
               </div>
             </div>
