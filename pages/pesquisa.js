@@ -7,7 +7,7 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12 px-3">
         <div className="texto-basico">
           <h2 className="titulo-principal">Linhas de Pesquisa</h2>
           <br></br>
@@ -87,7 +87,7 @@ export default function Home() {
           <br></br>
         </div>
         <h2 className="titulo-principal">Pesquisas em andamento</h2>
-        
+
         <h2 className="titulo-principal">Pesquisas concluídas</h2>
 
       </div>

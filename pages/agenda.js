@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 export default function Calendario() {
   return (
     <div id="contact" className="w-full min-h-screen ">
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-12 pt-12">
         <p className="titulo-principal">Agenda</p>
         <div className="shadow-lg">
           <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-100 rounded-b w-full rounded-lg">

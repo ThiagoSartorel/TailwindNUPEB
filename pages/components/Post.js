@@ -6,7 +6,7 @@ export default function Post() {
       <a href="/noticia_evento">
         <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
           <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
-            <h4 className="font-semibold text-center text-2xl pt-2">
+            <h4 className="font-semibold text-center pt-2 text-base sm:text-lg md:text-2xl">
               Titulo 
             </h4>
             <p className="text-gray-500 text-end text-sm">24/06/2022</p>
@@ -28,7 +28,7 @@ export default function Post() {
       <a href="/noticia_evento">
         <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
           <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
-            <h4 className="font-semibold text-center text-2xl pt-2">
+            <h4 className="font-semibold text-center text-base sm:text-lg md:text-2xl pt-2">
               Titulo 
             </h4>
             <p className="text-gray-500 text-end text-sm">24/06/2022</p>
@@ -50,7 +50,7 @@ export default function Post() {
       <a href="/noticia_evento">
         <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
           <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
-            <h4 className="font-semibold text-center text-2xl pt-2">
+            <h4 className="font-semibold text-center text-base sm:text-lg md:text-2xl pt-2">
               Titulo 
             </h4>
             <p className="text-gray-500 text-end text-sm">24/06/2022</p>

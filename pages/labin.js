@@ -7,7 +7,7 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12 px-3">
         <div className="texto-basico">
           <h2 className="titulo-principal">LABIN</h2>
           <br></br>
