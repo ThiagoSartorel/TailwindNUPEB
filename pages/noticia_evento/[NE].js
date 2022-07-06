@@ -3,10 +3,15 @@ import HtmlParser from 'react-html-parser';
 
 export default function Home(props) {
   const img = 'http://172.16.248.88:3333/images/1'
+  if (typeof document != 'undefined') {
+    document.getElementById("imagem").style = "background-image: url('http://172.16.248.88:3333/images/3')";
+  
+  }
+  
   return (
     <>
 
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-16 pt-12">
+      <div className="mx-5 sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-16 pt-12">
         <h1 className="titulo-principal">{props.ne.title}</h1>
         <div className="w-full py-2 px-4 flex flex-col">
           <div className="w-full">
@@ -18,7 +23,7 @@ export default function Home(props) {
             <span className="bg-gray-400 text-white rounded-md text-sm px-2 py-1">Subcategoria</span>
           </div>
         </div>
-        <img src="http://172.16.248.88:3333/images/1"/>
+        <div id="imagem" className="lg:w-full lg:h-[650px] imagem-principal" />
         <p>{HtmlParser(props.ne.content)}</p>
       </div>
     </>
@@ -32,7 +37,7 @@ export async function getServerSideProps(context) {
   //console.log(context.params.NE)
   var codNoticia = context.params.NE;
 
-  var imagem = await axios.get('http://172.16.248.88:3333/images/1')
+  var imagem = await axios.get('http://172.16.248.88:3333/images/2')
 
 
   console.log(imagem)

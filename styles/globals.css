@@ -37,3 +37,10 @@ input, textarea {
   @apply text-base text-gray-700
 }
 
+.imagem-principal{
+  background-repeat: none;
+  background-color: green;
+  background-position: center center;
+  background-size: cover;
+}
+
