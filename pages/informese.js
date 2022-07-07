@@ -22,7 +22,7 @@ export default function Home() {
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Sobre nós
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y touch-none h-80">
                  
                     <h3>Grupos de Estudos</h3>
                     <ul>Objetivo:</ul>
@@ -54,15 +54,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="sm:w-full lg:w-1/2 px-1 py-2 flex items-center">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[300px] bg-center banner" src="https://source.unsplash.com/1920x1080/?book" alt="" />
+                <div className="rounded overflow-hidden shadow-lg my-1 w-full">
+                  <img className="w-full min-h-[300px] max-h-[410px] bg-center banner" src="https://source.unsplash.com/1920x1080/?book" alt="" />
                 </div>
               </div>
             </div>
             <div className="flex flex-wrap py-2 px-2">
               <div className="sm:w-full lg:w-1/2 px-1 py-2 flex items-center lg:order-1 order-2">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[300px] bg-center banner" src="https://source.unsplash.com/1920x1080/?book" alt="" />
+                <div className="rounded overflow-hidden shadow-lg my-1 w-full">
+                  <img className="w-full min-h-[300px] max-h-[410px] bg-center banner" src="https://source.unsplash.com/1920x1080/?book" alt="" />
                 </div>
               </div>
               <div className="w-full sm:w-full lg:w-1/2 px-1 py-2 flex items-center order-1 lg:order-2">
@@ -117,7 +117,7 @@ export default function Home() {
           <section id="cards-about">
             <div className="flex flex-wrap py-2 px-2 ">
               <div className="w-full sm:w-full lg:w-1/2 px-1 py-2 flex items-center">
-                <div className="w-full min-h-[400px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
+                <div className="w-full min-h-[400px]  rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                   Projetos 
                   </h2>
@@ -150,8 +150,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="sm:w-full lg:w-1/2 px-1 py-2 flex items-center">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[300px] banner" src="https://source.unsplash.com/1920x1080/?book " alt="" />
+                <div className="rounded overflow-hidden shadow-lg my-1 w-full">
+                  <img className="w-full min-h-[300px] max-h-[410px] banner" src="https://source.unsplash.com/1920x1080/?book " alt="" />
                 </div>
               </div>
             </div>
@@ -187,8 +187,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="sm:w-full lg:w-1/2 px-1 py-2 flex items-center">
-                <div className="rounded overflow-hidden shadow-lg my-1 bg-card-text">
-                  <img className="w-full min-h-[300px] banner" src="https://source.unsplash.com/1920x1080/?car" alt="" />
+                <div className="rounded overflow-hidden shadow-lg my-1 w-full">
+                  <img className="w-full min-h-[300px] max-h-[410px] banner" src="https://source.unsplash.com/1920x1080/?car" alt="" />
                 </div>
               </div>
             </div>
