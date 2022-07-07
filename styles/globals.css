@@ -17,6 +17,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-style{
+  @apply bg-[#f7a439] text-white font-semibold
+}
+
+.nav-style a{
+  @apply hover:text-white
+}
+
+.nav-mobile {
+  @apply bg-[#f7a439] text-white p-3 text-2xl font-semibold
+}
+
+.nav-mobile li {
+   @apply mb-6
+}
+
 html {
   @apply bg-gray-200 text-black scroll-smooth font-[rubik];
 }
@@ -64,3 +80,4 @@ input, textarea {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid rgba(128, 128, 128, 0.267);  /* creates padding around scroll thumb */
 }
+

@@ -22,7 +22,7 @@ const Navbar = () => {
   // console.log(session);
 
   return (
-    <div className='fixed h-14 w-full flex flex-nowrap items-center p-7 bg-[#f7a439] mb-[2px] z-10 text-lg'>
+    <div className='nav-style fixed h-14 w-full flex flex-nowrap items-center p-7 mb-[2px] z-10 text-lg'>
       {/* Left Side */}
       <div className='flex grow items-center justify-start'>
         <Link href='/'>
@@ -112,47 +112,47 @@ const Navbar = () => {
         <div className='flex items-center'>
           <ul className="w-full flex space-x-4">
             <li>
-              <a href="/" className="hover:text-white">
+              <a href="/">
                 Home
               </a>
             </li>
             <li>
-              <a href="/informese" className="hover:text-white">
+              <a href="/informese">
                 Informe-se
               </a>
             </li>
             <li>
-              <a href="/pesquisa" className="hover:text-white">
+              <a href="/pesquisa">
                 Pesquisa
               </a>
             </li>
             <li>
-              <a href="/agenda" className="hover:text-white">
+              <a href="/agenda">
                 Agenda
               </a>
             </li>
             <li>
-              <a href="/noticias" className="hover:text-white">
+              <a href="/noticias" >
                 Blog
               </a>
             </li>
             <li>
-              <a href="/indicacoes" className="hover:text-white">
+              <a href="/indicacoes">
                 Indicações
               </a>
             </li>
             <li>
-              <a href="/labin" className="hover:text-white">
+              <a href="/labin" >
                 LABIN
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white">
+              <a href="/contact">
                 Contato
               </a>
             </li>
             <li >
-              <a href="/login" className="hover:text-white ">
+              <a href="/login">
                 <BsPerson size={30} />
               </a>
             </li>
@@ -171,33 +171,33 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'md:hidden fixed top-0 left-0 w-full h-screen bg-[#f7a439] flex justify-center items-center ease-in duration-300'
+            ? 'nav-mobile md:hidden fixed top-0 left-0 w-full h-screen flex justify-center items-center ease-in duration-300'
             : 'md:hidden fixed top-[-100%] left-0 w-full h-screen bg-[#0e0e10] flex justify-center items-center ease-in duration-300'
         }
       >
         <ul className='text-center'>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/'>Home</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/informese'>Informe-se</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/pesquisa'>Pesquisa</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/agenda'>Agenda</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/noticias'>Blog</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/indicacoes'>Indicações</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/labin'>Labin</Link>
           </li>
-          <li onClick={() => setNav(false)} className='p-3 text-2xl font-semibold text-white'>
+          <li onClick={() => setNav(false)}>
             <Link href='/contact'>Contato</Link>
           </li>
         </ul>
