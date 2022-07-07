@@ -93,7 +93,7 @@ export default function Home() {
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas em andamento
                 </h2>
-                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
+                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
                 <p className="text-gray-600 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   posuere porta iaculis. Morbi tempus ante tellus, sit amet
@@ -167,7 +167,7 @@ export default function Home() {
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas concluídas
                 </h2>
-                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
+                <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
                 <p className="text-gray-600 text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   posuere porta iaculis. Morbi tempus ante tellus, sit amet

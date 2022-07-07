@@ -22,7 +22,7 @@ export default function Home() {
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Sobre nós
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y touch-none h-80">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y touch-none h-80 scroll">
                  
                     <h3>Grupos de Estudos</h3>
                     <ul>Objetivo:</ul>
@@ -70,7 +70,7 @@ export default function Home() {
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold ">
                     Objetivos
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-48">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
                   <p className="text-gray-600 text-base py-2">
                   Pesquisar políticas para a Educação Básica e suas relações com os processos formativos na escola, levando em consideração os fundamentos teóricos envolvidos na elaboração, implementação, avaliação, resistências e redefinição das políticas educacionais. 
                   </p>
@@ -121,7 +121,7 @@ export default function Home() {
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                   Projetos 
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
                   <p className="text-gray-600 text-base py-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec posuere porta iaculis. Morbi tempus ante tellus, sit
@@ -161,7 +161,7 @@ export default function Home() {
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Produções
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
                   <p className="text-gray-600 text-base py-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec posuere porta iaculis. Morbi tempus ante tellus, sit
