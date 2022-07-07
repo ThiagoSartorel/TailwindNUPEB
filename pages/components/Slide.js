@@ -1,16 +1,24 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
+import axios from "axios"
 
+var featuredProducts = [{"url":"", "alt":"Loader"}];
+//  "imageSlide/Kisses.jpg",
+//  "imageSlide/Nietzsche.jpg",
+//  "imageSlide/Twoface.png",
 
-const featuredProducts = [
-  "imageSlide/Kisses.jpg",
-  "imageSlide/Nietzsche.jpg",
-  "imageSlide/Twoface.png",
-];
+async function getBanner(){
+  const banner = await axios.get(process.env.BACKEND + 'banners2/listActive')
+  //console.log(banner.data)
+  featuredProducts = banner.data;
+}
+
+getBanner();
 
 let count = 0;
 let slideInterval;
-export default function Slider() {
+export default function Slider(props) {
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideRef = useRef();
@@ -54,8 +62,8 @@ export default function Slider() {
 
   return (
     <div ref={slideRef} className="w-full select-none relative drop-shadow-xl ">
-      <div className="aspect-w-16 aspect-h-9">
-        <img src={featuredProducts[currentIndex]} alt="" className="w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
+      <div className="aspect-w-16 aspect-h-9"> 
+        <img src={"http://172.16.248.88:3333/images/" + featuredProducts[currentIndex].url} alt={featuredProducts[currentIndex].alt} className="banner w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
       </div>
 
       <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
@@ -76,12 +84,4 @@ export default function Slider() {
   );
 }
 
-export async function getServerSideProps(context) {
-  // Fetch data from external API
 
-  var banner = await axios.get('http://172.16.248.88:3333/banners')
-  console.log(banner);
-
-  // Pass data to the page via props
-  return { props: { ne, dataNoticia } }
-}
