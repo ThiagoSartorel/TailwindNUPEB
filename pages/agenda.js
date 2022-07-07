@@ -8,7 +8,7 @@ export default function Calendario() {
       <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-12 pt-12">
         <p className="titulo-principal">Agenda</p>
         <div className="shadow-lg">
-          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-100 rounded-b w-full rounded-lg">
+          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-100 rounded-b w-full">
             <div className="flex flex-row">
              
               <div>
@@ -31,7 +31,7 @@ export default function Calendario() {
               
             </div>
             <hr className="mb-4"></hr>
-            <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-4 gap-4">
+            <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
               <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
                   <h4 className="font-semibold text-lg">Titulo do evento</h4>

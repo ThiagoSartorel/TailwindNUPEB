@@ -48,7 +48,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mx-5">
           {/* left */}
-          <div className="h-full shadow-md shadow-gray-400 rounded-xl p-4 bg-slate-300">
+          <div className="h-full shadow-md shadow-gray-400 rounded-xl p-4 bg-card">
             <div className="lg:p-4 h-full ">
               <div>
                 <p className="uppercase pt-4 pb-3">Localização</p>
@@ -136,7 +136,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4 bg-slate-300">
+          <div className="w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4 bg-card">
             <div className="p-4">
               <form
                 onSubmit={handleSubmit}

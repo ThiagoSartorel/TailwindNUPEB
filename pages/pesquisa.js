@@ -89,7 +89,7 @@ export default function Home() {
         <section id="cards-about">
           <div className="flex flex-wrap py-2  ">
             <div className="w-full px-4 py-2 flex items-center">
-              <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
+              <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas em andamento
                 </h2>
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap py-2 ">
             <div className="w-full px-4 py-2 flex items-center order-1 lg:order-2">
-              <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 hover:bg-gray-300">
+              <div className="w-full min-h-[450px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
                 <h2 className="text-2xl text-gray-700 text-center py-3 font-bold">
                   Pesquisas concluídas
                 </h2>
