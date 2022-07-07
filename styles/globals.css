@@ -18,7 +18,7 @@
 @tailwind utilities;
 
 .nav-style{
-  @apply bg-[#f7a439] text-white font-semibold
+  @apply bg-[#f7a439] text-white font-extralight
 }
 
 .nav-style a{
@@ -26,7 +26,7 @@
 }
 
 .nav-mobile {
-  @apply bg-[#f7a439] text-white p-3 text-2xl font-semibold
+  @apply bg-[#f7a439] bg-opacity-90 text-white p-3 text-2xl font-semibold
 }
 
 .nav-mobile li {
@@ -68,7 +68,7 @@ input, textarea {
 }
 
 .scroll::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 6px;               /* width of the entire scrollbar */
 }
 
 .scroll::-webkit-scrollbar-track {
@@ -78,6 +78,19 @@ input, textarea {
 .scroll::-webkit-scrollbar-thumb {
   background-color: rgba(128, 128, 128, 0.603);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid rgba(128, 128, 128, 0.267);  /* creates padding around scroll thumb */
+  border: 3px solid rgba(90, 85, 85, 0.486);  /* creates padding around scroll thumb */
 }
 
+body::-webkit-scrollbar {
+  width: 6px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  @apply bg-black bg-opacity-20 rounded-md      /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.603);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgba(59, 57, 57, 0.63);  /* creates padding around scroll thumb */
+}
