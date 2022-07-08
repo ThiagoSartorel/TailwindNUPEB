@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 import axios from "axios"
 
-var featuredProducts = [{"url":"", "alt":"Loader"}];
+var featuredProducts = [{"url":"loader", "alt":"Loader"}];
 //  "imageSlide/Kisses.jpg",
 //  "imageSlide/Nietzsche.jpg",
 //  "imageSlide/Twoface.png",

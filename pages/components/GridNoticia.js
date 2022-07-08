@@ -3,14 +3,14 @@ import axios from 'axios';
 
 async function getNoticias() {
     const retorno = await axios.get(process.env.BACKEND + 'news')
-    console.log(retorno.data)
+    //console.log(retorno.data)
     if (typeof document != 'undefined') {
         for (let i = 0; i < 3; i++) {
             
             var dataNoticia = new Date(retorno.data[i].created_at);
             document.getElementById("T" + (i + 1)).innerHTML = retorno.data[i].title;
             document.getElementById("D" + (i + 1)).innerHTML = retorno.data[i].description;
-            document.getElementById("DT" + (i + 1)).innerHTML = dataNoticia.toLocaleDateString('py-BR', { timeXone: 'UTC' });
+            document.getElementById("DT" + (i + 1)).innerHTML = dataNoticia.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
             //document.getElementById("I" + (i + 1)).src = "http://172.16.248.88:3333/images/" + 
             document.getElementById("BT" + (i + 1)).href = '/noticia_evento/' + retorno.data[i].id;
         }
