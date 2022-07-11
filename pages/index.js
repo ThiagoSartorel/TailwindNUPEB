@@ -12,23 +12,29 @@ export default function Home() {
         <Slider />
       </div>
 
-      <div className="sm:mx-20 md:mx-30 lg:mx-48  ">
+      <div className="text-center p-6 bg-slate-500 bg-opacity-10">
+        <a className="titulo-principal text-3x1">NuPEB - </a>
+
+        <a className="text-[3rem] text-center font-thin text-3xl text-[#f7a439]">
+          Núcleo de Pesquisa em Educação Básica
+        </a>
+      </div>
+
+      <div className="sm:mx-20 md:mx-30 lg:mx-48">
         <div className="texto-basico"></div>
-        <div className="text-[3rem] text-center font-semibold text-3xl tracking-widest uppercase text-black py-8">
+        <div className="text-[3rem] text-center font-semibold text-2xl tracking-widest uppercase text-gray-700 py-8">
           <h1>Linhas de Pesquisa</h1>
         </div>
         <GridPesquisa />
-        </div>
-        <br></br>
-        <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen">
+      </div>
+      <br></br>
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-20 ">
         <div className="texto-basico"></div>
-        <div className="text-[3rem] text-center font-semibold text-3xl tracking-widest uppercase text-black py-8">
+        <div className="text-[3rem] text-center font-semibold text-2xl tracking-widest uppercase text-gray-700 py-8">
           <h1>Últimas notícias</h1>
         </div>
-        <GridNoticia/>
+        <GridNoticia />
       </div>
-
-      
     </>
   );
 }

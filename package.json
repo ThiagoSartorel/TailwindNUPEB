@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.5",
+    "@material-tailwind/react": "^1.0.6",
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
     "next": "12.1.6",
