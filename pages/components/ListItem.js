@@ -2,11 +2,9 @@ export default function ListItem({ movie }) {
   return (
     <article className="flex items-start space-x-6 p-6">
       <img
-        src={"movie.image"}
+        src={"https://source.unsplash.com/1920x1080/?book"}
         alt=""
-        width="60"
-        height="88"
-        className="flex-none rounded-md bg-slate-100"
+        className="flex-none rounded-md bg-slate-100 banner w-20 h-28"
       />
       <div className="min-w-0 relative flex-auto">
         <h2 className="font-semibold text-slate-900 truncate pr-20">
