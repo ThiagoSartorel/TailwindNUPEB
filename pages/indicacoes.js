@@ -3,11 +3,14 @@ import DropDown from "./components/DropDown";
 import Slider from "./components/Slide";
 import Post from "./components/Post";
 import Contact from "./contact";
+import Nav from "./components/Nav";
+import List from "./components/List";
+import ListItem from "./components/ListItem";
 
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-8 pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12">
         <div className="textoBasico">
           <h2 className="titulo-principal">Indicações</h2>
           <div className="hidden md:flex grow-[2] items-center justify-center">
@@ -21,16 +24,24 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <br></br>
-          <h3>Filmes;</h3>
+        </div>
 
-          <br></br>
-          <h3>Livros;</h3>
-
-          <br></br>
-          <h3>Materiais didáticos;</h3>
+        <div className="divide-y divide-slate-100">
+          <List>
+            <ListItem key={"movie.id"} movie={"movie"} />
+          </List>
+          <List>
+            <ListItem key={"movie.id"} movie={"movie"} />
+          </List>
+          <List>
+            <ListItem key={"movie.id"} movie={"movie"} />
+          </List>
         </div>
       </div>
     </>
   );
 }
+
+//Filmes
+//Livros
+//Materiais didáticos
