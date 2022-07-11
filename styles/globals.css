@@ -34,7 +34,7 @@
 }
 
 html {
-  @apply bg-gray-200 text-black scroll-smooth font-[rubik];
+  @apply bg-gray-200 text-black scroll-smooth font-[rubik] text-gray-700;
 }
 
 input, textarea {
@@ -49,9 +49,6 @@ input, textarea {
   @apply bg-slate-50 h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600
 }
 
-.texto-basico{
-  @apply text-base text-gray-700
-}
 
 .imagem-principal{
   background-repeat: none;
