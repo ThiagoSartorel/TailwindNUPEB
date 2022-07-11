@@ -20,7 +20,7 @@ function Post(props) {
             src={props.image}
           ></img>
         </div>
-        <div className="p-4 bg-slate-200 h-36 sm:h-24 md:h-20 lg:h-14">{conteudo}</div>
+        <div className="p-4 bg-slate-200 h-auto sm:h-24 md:h-20 lg:h-16">{conteudo}</div>
         <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
           <span className="text-gray-500 text-sm text-left">by {props.author}</span>
           <p className="text-gray-500 text-left text-sm">{props.category}</p>
@@ -56,7 +56,7 @@ export default function Noticias(props) {
           </select>
 
         </div>
-        <div className="container mx-auto grid px-2 grid-cols-2 gap-6">
+        <div className="container mx-auto grid px-2 grid-cols-1 sm:grid-cols-2 gap-6">
 
           {props.noticias.map((noticia) =>{
             var data = noticia.created_at
