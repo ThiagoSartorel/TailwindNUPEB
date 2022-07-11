@@ -6,10 +6,11 @@ async function getNoticias() {
     //console.log(retorno.data)
     if (typeof document != 'undefined') {
         for (let i = 0; i < 3; i++) {
-            
+            var conteudo = retorno.data[i].description;
+            conteudo = (conteudo.length > 85) ? conteudo.slice(0, 85) + "..." : conteudo //encurtador de descrição
             var dataNoticia = new Date(retorno.data[i].created_at);
             document.getElementById("T" + (i + 1)).innerHTML = retorno.data[i].title;
-            document.getElementById("D" + (i + 1)).innerHTML = retorno.data[i].description;
+            document.getElementById("D" + (i + 1)).innerHTML = conteudo;
             document.getElementById("DT" + (i + 1)).innerHTML = dataNoticia.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
             //document.getElementById("I" + (i + 1)).src = "http://172.16.248.88:3333/images/" + 
             document.getElementById("BT" + (i + 1)).href = '/noticia_evento/' + retorno.data[i].id;
@@ -33,7 +34,7 @@ export default function GridNoticia() {
                 <div>
                     <img src="https://source.unsplash.com/1920x1080/?book" id="I1"></img>
                 </div>
-                <div className="p-4 bg-slate-200" id="D1">
+                <div className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24" id="D1">
                     Description
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
@@ -50,7 +51,7 @@ export default function GridNoticia() {
                 <div>
                     <img src="https://source.unsplash.com/1920x1080/?car" id="I2"></img>
                 </div>
-                <div className="p-4 bg-slate-200" id="D2">
+                <div className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24" id="D2">
                     Description
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
@@ -67,7 +68,7 @@ export default function GridNoticia() {
                 <div>
                     <img src="https://source.unsplash.com/1920x1080/?city" id="I3"></img>
                 </div>
-                <div className="p-4 bg-slate-200" id="D3">
+                <div className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24" id="D3">
                     Description
                 </div>
                 <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
