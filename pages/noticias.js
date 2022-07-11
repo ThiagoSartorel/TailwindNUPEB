@@ -2,9 +2,9 @@ import { FaFilter } from 'react-icons/fa';
 import axios from 'axios';
 
 function Post(props) {
-  var conteudo  = props.content;
+  var conteudo = props.content;
   conteudo = (conteudo.length > 85) ? conteudo.slice(0, 85) + "..." : conteudo //encurtador de descrição
-  
+
   return (
     <a href={"/noticia_evento/" + props.id}>
       <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
@@ -58,9 +58,9 @@ export default function Noticias(props) {
         </div>
         <div className="container mx-auto grid px-2 grid-cols-1 sm:grid-cols-2 gap-6">
 
-          {props.noticias.map((noticia) =>{
+          {props.noticias.map((noticia) => {
             var data = noticia.created_at
-            data = new Date(data).toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+            data = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' })
             return <Post id={noticia.id} title={noticia.title} content={noticia.description} author="AutorPost" category="CategoriaPost" date={data} image="https://source.unsplash.com/1920x1080/?car" />
           })}
 
