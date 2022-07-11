@@ -13,8 +13,8 @@ export default function Home() {
       </div>
 
       <div className="text-center p-6 bg-slate-500 bg-opacity-10">
-        <a className="titulo-principal text-3x1">NuPEB - </a>
-        <a className="text-[3rem] text-center font-thin text-3xl text-[#f7a439]">
+        <a className="text-[3rem] text-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439]">NuPEB - </a>
+        <a className="text-[3rem] text-center font-thin text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439]">
           Núcleo de Pesquisa em Educação Básica
         </a>
       </div>
