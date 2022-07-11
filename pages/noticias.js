@@ -2,6 +2,9 @@ import { FaFilter } from 'react-icons/fa';
 import axios from 'axios';
 
 function Post(props) {
+  var conteudo  = props.content;
+  conteudo = (conteudo.length > 85) ? conteudo.slice(0, 85) + "..." : conteudo //encurtador de descrição
+  
   return (
     <a href={"/noticia_evento/" + props.id}>
       <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
@@ -17,7 +20,7 @@ function Post(props) {
             src={props.image}
           ></img>
         </div>
-        <div className="p-4 bg-slate-200">{props.content}</div>
+        <div className="p-4 bg-slate-200 h-36 sm:h-24 md:h-20 lg:h-14">{conteudo}</div>
         <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
           <span className="text-gray-500 text-sm text-left">by {props.author}</span>
           <p className="text-gray-500 text-left text-sm">{props.category}</p>
