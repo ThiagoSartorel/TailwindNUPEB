@@ -1,7 +1,37 @@
-import Post from "./components/Post";
 import { FaFilter } from 'react-icons/fa';
+import axios from 'axios';
 
-export default function Noticias() {
+function Post(props) {
+  var conteudo = props.content;
+  conteudo = (conteudo.length > 85) ? conteudo.slice(0, 85) + "..." : conteudo //encurtador de descrição
+
+  return (
+    <a href={"/noticia_evento/" + props.id}>
+      <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
+        <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
+          <h4 className="font-semibold text-center pt-2 text-base sm:text-lg md:text-2xl">
+            {props.title}
+          </h4>
+          <p className="text-gray-500 text-end text-sm">{props.date}</p>
+
+        </div>
+        <div>
+          <img
+            src={props.image}
+          ></img>
+        </div>
+        <div className="p-4 bg-slate-200 h-auto sm:h-24 md:h-20 lg:h-16">{conteudo}</div>
+        <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
+          <span className="text-gray-500 text-sm text-left">by {props.author}</span>
+          <p className="text-gray-500 text-left text-sm">{props.category}</p>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+
+export default function Noticias(props) {
   return (
     <div className="min-h-screen pt-14 mb-16 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
@@ -18,16 +48,35 @@ export default function Noticias() {
       </div>
       <div>
         <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 pr-4">
-        <FaFilter className="my-2"/>
+          <FaFilter className="my-2" />
           <select className="rounded-md px-2 py-1">
             <option disabled defaultChecked>Filtro</option>
             <option>Noticias</option>
             <option>Eventos</option>
           </select>
-          
+
         </div>
-        <Post />
+        <div className="container mx-auto grid px-2 grid-cols-1 sm:grid-cols-2 gap-6">
+
+          {props.noticias.map((noticia) => {
+            var data = noticia.created_at
+            data = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' })
+            return <Post id={noticia.id} title={noticia.title} content={noticia.description} author="AutorPost" category="CategoriaPost" date={data} image="https://source.unsplash.com/1920x1080/?car" />
+          })}
+
+        </div>
       </div>
     </div>
   );
 }
+
+export async function getServerSideProps(context) {
+  var noticias = await axios.get('http://172.16.248.88:3333/news/')
+
+  noticias = noticias.data
+
+  return {
+    props: { noticias }, // will be passed to the page component as props
+  }
+}
+
