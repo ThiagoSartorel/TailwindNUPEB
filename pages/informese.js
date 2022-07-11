@@ -8,16 +8,17 @@ export default function Home() {
   return (
     <>
       <div className="sm:mx-20 md:mx-30 lg:mx-24 min-h-screen mb-8 pt-12">
+      <div className="textoBasico">
         <div className="titulo-principal">
           <h1>Informe-se</h1>
         </div>
-        <div className="textoBasico">
-          <br></br>
+  
+     
 
           <section id="cards-about" className=" ">
             <div className="flex flex-wrap px-2 gap-4 place-content-around">
               <div className="w-full sm:w-full lg:w-1/2 px-1 flex items-center">
-                <div className=" w-full  rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
+                <div className=" w-full  rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold ">
                     Objetivos
                   </h2>
