@@ -11,7 +11,7 @@ import { FaSearch, FaFilter } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12 mb-8">
         <div className="textoBasico">
           <h2 className="titulo-principal">Indicações</h2>
 
