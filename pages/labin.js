@@ -8,15 +8,24 @@ import {
   ShareIcon,
   AtSymbolIcon,
   CheckCircleIcon,
-  ClipboardCheckIcon,
+  ArrowNarrowUpIcon,
 } from "@heroicons/react/solid";
 
 export default function Home() {
   return (
     <>
-      <div className=" sm:mx-20 md:mx-30 lg:mx-24 min-h-screen mb-16 pt-12">
+      <div
+        className=" sm:mx-20 md:mx-30 lg:mx-24 min-h-screen mb-16 pt-12"
+        id="top"
+      >
         <div className="texto-basico">
           <h2 className="titulo-principal">LABIN</h2>
+
+          <a  href="#top">
+            <svg className="icon fixed bottom-20 right-1 w-10 ">
+              <ArrowNarrowUpIcon />
+            </svg>
+          </a>
 
           <div className="m-6 sm:m-0 sm:p-2 md:p-4 text-center bg-slate-500 bg-opacity-10 rounded-2xl shadow-lg">
             <h1 className="pt-4 text-[3rem] text-center font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] ">

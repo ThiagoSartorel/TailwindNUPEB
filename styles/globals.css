@@ -34,7 +34,7 @@
 }
 
 html {
-  @apply bg-gray-200 text-black scroll-smooth font-[rubik] text-gray-700;
+  @apply bg-gray-200 scroll-smooth font-[rubik] text-gray-700;
 }
 
 input, textarea {
@@ -79,7 +79,7 @@ input, textarea {
 }
 
 .icon{
-  @apply text-cyan-500 hover:text-cyan-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-10 text-opacity-40 
+  @apply text-cyan-500 hover:text-cyan-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-8 text-opacity-40 
 }
 
 body::-webkit-scrollbar {
