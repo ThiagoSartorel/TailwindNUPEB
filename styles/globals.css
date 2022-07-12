@@ -78,6 +78,10 @@ input, textarea {
   border: 3px solid rgba(90, 85, 85, 0.486);  /* creates padding around scroll thumb */
 }
 
+.icon{
+  @apply text-cyan-500 hover:text-cyan-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-10 text-opacity-40 mt-5 mb-5 
+}
+
 body::-webkit-scrollbar {
   width: 6px;               /* width of the entire scrollbar */
 }
@@ -91,3 +95,4 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid rgba(59, 57, 57, 0.63);  /* creates padding around scroll thumb */
 }
+

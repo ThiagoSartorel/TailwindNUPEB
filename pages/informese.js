@@ -4,6 +4,7 @@ import Slider from "./components/Slide";
 import Post from "./components/Post";
 import Contact from "./contact";
 
+
 export default function Home() {
   return (
     <>
