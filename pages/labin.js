@@ -14,22 +14,24 @@ import {
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-20 pt-12 px-3">
+      <div className=" sm:mx-20 md:mx-30 lg:mx-24 min-h-screen mb-16 pt-12">
         <div className="texto-basico">
           <h2 className="titulo-principal">LABIN</h2>
 
-          <div className="text-center p-8 bg-slate-500 bg-opacity-10 rounded-2xl shadow-lg">
+          <div className="m-6 sm:m-0 sm:p-2 md:p-4 text-center bg-slate-500 bg-opacity-10 rounded-2xl shadow-lg">
             <h1 className="pt-4 text-[3rem] text-center font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] ">
               Laboratório de Inovação Educacional
             </h1>
 
-            <div className="text-start p-6 ">
-              <h2 className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start shadow-sm">
-                <svg className="icon">
+            <div className="text-start p-1 sm:p-2 md:p-4  ">
+              <div className="flex flex-row shadow-sm">
+                <svg className="icon w-16">
                   <ShareIcon />
                 </svg>
-                Resumo
-              </h2>
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                  Resumo
+                </h2>
+              </div>
               <p className="text-justify p-4">
                 Pesquisar a questão da inovação na educação relacionada à
                 produção de conteúdos e à divulgação científica, promovendo a
@@ -72,14 +74,15 @@ export default function Home() {
                 ensino e extensão do NuPEB e da Universidade.
               </p>
             </div>
-
-            <div className="text-start p-6">
-              <h2 className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start shadow-sm">
-                <svg className="icon">
+            <div className="text-start p-1 sm:p-2 md:p-4  ">
+              <div className="flex flex-row shadow-sm">
+                <svg className="icon w-16">
                   <SpeakerphoneIcon />
                 </svg>
-                Finalidade
-              </h2>
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                  Finalidade
+                </h2>
+              </div>
 
               <p className="text-justify p-4">
                 <ul>
@@ -105,13 +108,15 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-start p-6">
-              <h2 className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start shadow-sm">
-                <svg className="icon">
+            <div className="text-start p-1 sm:p-2 md:p-4  ">
+              <div className="flex flex-row shadow-sm">
+                <svg className="icon w-16">
                   <CheckCircleIcon />
                 </svg>
-                Objetivos
-              </h2>
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                  Objetivos
+                </h2>
+              </div>
               <p className="text-justify p-4">
                 <h3 className="font-medium pb-2">Geral: </h3>
                 <ul>
@@ -145,14 +150,15 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-start p-6">
-              <h1 className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start shadow-sm">
-                <svg className="icon">
+            <div className="text-start p-1 sm:p-2 md:p-4  ">
+              <div className="flex flex-row shadow-sm">
+                <svg className="icon w-16">
                   <AtSymbolIcon />
                 </svg>
-                Coordenação
-              </h1>
-
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                  Coordenação
+                </h2>
+              </div>
               <p className="text-justify p-4">
                 <ul>Prof. Dr. Jaime Farias Dresch</ul>
                 <ul>Email: labin@uniplaclages.edu.br</ul>
