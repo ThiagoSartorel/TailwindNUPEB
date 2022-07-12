@@ -18,7 +18,7 @@ export default function Home() {
         <div className="texto-basico">
           <h2 className="titulo-principal">LABIN</h2>
 
-          <div className="text-center p-6 bg-slate-500 bg-opacity-10 rounded-2xl">
+          <div className="text-center p-6 bg-slate-500 bg-opacity-10 rounded-2xl shadow-lg">
             <a className="text-[3rem] text-center font-thin text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439]">
               Laboratório de Inovação Educacional
             </a>
