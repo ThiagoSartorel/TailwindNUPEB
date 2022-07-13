@@ -22,7 +22,7 @@ export default function Home() {
           <h2 className="titulo-principal">LABIN</h2>
 
           <a  href="#top">
-            <svg className="icon fixed bottom-20 right-1 w-10 ">
+            <svg className="icon fixed bottom-10 right-1 sm:right-8 w-8 shadow-lg shadow-slate-600 rounded-full">
               <ArrowNarrowUpIcon />
             </svg>
           </a>
@@ -37,7 +37,7 @@ export default function Home() {
                 <svg className="icon w-16">
                   <ShareIcon />
                 </svg>
-                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 flex font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start pb-2">
                   Resumo
                 </h2>
               </div>
@@ -88,7 +88,7 @@ export default function Home() {
                 <svg className="icon w-16">
                   <SpeakerphoneIcon />
                 </svg>
-                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-2 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
                   Finalidade
                 </h2>
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
                 <svg className="icon w-16">
                   <CheckCircleIcon />
                 </svg>
-                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-2 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
                   Objetivos
                 </h2>
               </div>
@@ -164,7 +164,7 @@ export default function Home() {
                 <svg className="icon w-16">
                   <AtSymbolIcon />
                 </svg>
-                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-3 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
+                <h2 className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  flex pb-2 font-normal text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#f7a439] text-start ">
                   Coordenação
                 </h2>
               </div>

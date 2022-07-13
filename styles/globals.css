@@ -18,11 +18,11 @@
 @tailwind utilities;
 
 .nav-style{
-  @apply bg-[#f7a439] text-white font-extralight
+  @apply bg-[#f7a439] text-white font-light
 }
 
 .nav-style a{
-  @apply hover:text-white
+  @apply hover:text-neutral-300 hover:font-medium hover:scale-110 ease-in duration-100
 }
 
 .nav-mobile {
@@ -46,7 +46,7 @@ input, textarea {
 }
 
 .btn-submit{
-  @apply bg-slate-50 h-2 w-full pt-2 mt-4 mb-1 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600
+  @apply bg-slate-50 h-1 w-full pt-2 mt-4 mb-5 text-center text-sm rounded-lg shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 hover:bg-orange-300 hover:text-neutral-600
 }
 
 
@@ -79,7 +79,7 @@ input, textarea {
 }
 
 .icon{
-  @apply text-cyan-500 hover:text-cyan-700 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-8 text-opacity-40 
+  @apply text-cyan-500 hover:text-cyan-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 h-8 text-opacity-50 
 }
 
 body::-webkit-scrollbar {

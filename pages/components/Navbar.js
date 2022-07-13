@@ -93,7 +93,7 @@ const Navbar = () => {
                           active
                             ? 'bg-gray-500 text-gray-100'
                             : 'text-gray-200',
-                          'block px-4 py-2 text-sm'
+                          'block px-4 py-2'
                         )}
                       >
                         License
@@ -199,6 +199,11 @@ const Navbar = () => {
           </li>
           <li onClick={() => setNav(false)}>
             <Link href='/contact'>Contato</Link>
+          </li>
+          <li onClick={() => setNav(false)}>
+            <a href="/login">
+              <BsPerson size={30} className="ml-12" />
+            </a>
           </li>
         </ul>
       </div>
