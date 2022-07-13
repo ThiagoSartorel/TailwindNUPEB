@@ -8,10 +8,10 @@ export default function Calendario() {
       <div className="mb-20 pt-12 mx-4 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-28 min-h-screen">
         <p className="titulo-principal">Agenda</p>
         <div className="shadow-md">
-          <div className=" rounded-lg px-2 py-8 md:py-8 md:px-16 dark:bg-gray-700 bg-gray-100 rounded-b w-full">
+          <div className=" bg-card p-12 rounded-md">
             <div className="flex flex-col sm:justify-between sm:flex-row">
               <div>
-                <input className="mb-4 px-2 py-1 w-auto" type="month"></input>
+                <input className="mb-4 px-2 py-1 w-auto rounded-xl bg-slate-200 opacity-80" type="month"></input>
               </div>
 
               <div className="flex flex-initial ">
@@ -23,7 +23,7 @@ export default function Calendario() {
                       placeholder="Pesquisar"
                     />
                   </div>
-                  <FaSearch className=" text-slate-400 hover:text-slate-600 hover:scale-110" />
+                  <FaSearch className="text-slate-400 hover:text-slate-600 hover:scale-110" />
                 </div>
               </div>
             </div>
