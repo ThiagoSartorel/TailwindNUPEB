@@ -19,7 +19,7 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="sm:mx-20 md:mx-30 lg:mx-48">
+      <div className="mx-2 sm:mx-20">
         <div className="texto-basico"></div>
         <div className="text-[3rem] text-center font-semibold text-2xl tracking-widest uppercase text-gray-700 py-8">
           <h1>Linhas de Pesquisa</h1>
@@ -27,7 +27,7 @@ export default function Home() {
         <GridPesquisa />
       </div>
       <br></br>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-20 ">
+      <div className="mx-2 sm:mx-20 mb-16 ">
         <div className="texto-basico"></div>
         <div className="text-[3rem] text-center font-semibold text-2xl tracking-widest uppercase text-gray-700 py-8">
           <h1>Últimas notícias</h1>

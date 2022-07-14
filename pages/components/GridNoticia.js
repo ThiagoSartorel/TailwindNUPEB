@@ -13,7 +13,7 @@ async function getNoticias() {
       document.getElementById("D" + (i + 1)).innerHTML = conteudo;
       document.getElementById("DT" + (i + 1)).innerHTML =
         dataNoticia.toLocaleDateString("pt-BR", { timeZone: "UTC" });
-      //document.getElementById("I" + (i + 1)).src = "http://172.16.248.88:3333/images/" +
+      document.getElementById("I" + (i + 1)).src = process.env.BACKEND + 'showFile/' + retorno.data[i].file_id 
       document.getElementById("BT" + (i + 1)).href =
         "/noticia_evento/" + retorno.data[i].id;
     }
@@ -23,7 +23,7 @@ async function getNoticias() {
 export default function GridNoticia() {
   getNoticias();
   return (
-    <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 px-4 gap-4">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 px-4 gap-4">
       <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
         <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
           <h4 className="font-semibold text-lg" id="T1">
@@ -34,10 +34,10 @@ export default function GridNoticia() {
           </a>
         </div>
         <div>
-          <img src="https://source.unsplash.com/1920x1080/?book" id="I1"></img>
+          <img className="banner w-full h-80 sm:h-96 lg:h-64" id="I1"></img>
         </div>
         <div
-          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24"
+          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-20 lg:h-36 xl:h-24"
           id="D1"
         >
           Description
@@ -64,11 +64,11 @@ export default function GridNoticia() {
             Autor
           </a>
         </div>
-        <div>
-          <img src="https://source.unsplash.com/1920x1080/?car" id="I2"></img>
+        <div >
+          <img  className="banner w-full h-80 sm:h-96 lg:h-64" id="I2"></img>
         </div>
         <div
-          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24"
+          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-20 lg:h-36 xl:h-24"
           id="D2"
         >
           Description
@@ -96,10 +96,10 @@ export default function GridNoticia() {
           </a>
         </div>
         <div>
-          <img src="https://source.unsplash.com/1920x1080/?city" id="I3"></img>
+          <img  className="banner w-full h-80 sm:h-96 lg:h-64" id="I3"></img>
         </div>
         <div
-          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-48 lg:h-36 xl:h-24"
+          className="p-4 bg-slate-200 h-26 sm:h-28 md:h-20 lg:h-36 xl:h-24"
           id="D3"
         >
           Description

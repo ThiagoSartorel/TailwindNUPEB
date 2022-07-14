@@ -61,7 +61,7 @@ export default function Noticias(props) {
           {props.noticias.map((noticia) => {
             var data = noticia.created_at
             data = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' })
-            return <Post id={noticia.id} title={noticia.title} content={noticia.description} author="AutorPost" category="CategoriaPost" date={data} image="https://source.unsplash.com/1920x1080/?car" />
+            return <Post id={noticia.id} title={noticia.title} content={noticia.description} author="AutorPost" category="CategoriaPost" date={data} image={process.env.BACKEND + 'showFile/' + noticia.file_id} />
           })}
 
         </div>
