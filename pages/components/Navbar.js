@@ -151,11 +151,6 @@ const Navbar = () => {
                 Contato
               </a>
             </li>
-            <li >
-              <a href="/login">
-                <BsPerson size={30} />
-              </a>
-            </li>
           </ul>
 
         </div>
@@ -199,11 +194,6 @@ const Navbar = () => {
           </li>
           <li onClick={() => setNav(false)}>
             <Link href='/contact'>Contato</Link>
-          </li>
-          <li onClick={() => setNav(false)}>
-            <a href="/login">
-              <BsPerson size={30} className="ml-12" />
-            </a>
           </li>
         </ul>
       </div>
