@@ -40,7 +40,7 @@ export async function getStaticProps(context) {
 
   const retorno = await axios.get(process.env.BACKEND + 'news/' + codNoticia);
   var ne = retorno.data;
-  console.log(ne);
+  //console.log(ne);
 
   var dataNoticia = new Date(retorno.data[0].created_at);
 
