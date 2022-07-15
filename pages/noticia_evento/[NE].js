@@ -15,7 +15,7 @@ export default function Home(props) {
         <h1 className="titulo-principal">{props.ne[0].title}</h1>
         <div className="w-full py-2 px-4 flex flex-col">
           <div className="w-full">
-            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{props.dataNoticia}</span> por <span className="text-blue-800">Fulano</span></span>
+            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{props.dataNoticia}</span> por <span className="text-blue-800">{props.ne[0].user.name}</span></span>
           </div>
           <div className="w-full space-x-4 flex flex-row-reverse">
             <span className="bg-gray-600 text-white rounded-md text-sm px-2 py-1 ml-4">Categoria</span>
@@ -40,6 +40,7 @@ export async function getStaticProps(context) {
 
   const retorno = await axios.get(process.env.BACKEND + 'news/' + codNoticia);
   var ne = retorno.data;
+  console.log(ne);
 
   var dataNoticia = new Date(retorno.data[0].created_at);
 
