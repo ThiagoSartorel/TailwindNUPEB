@@ -7,20 +7,20 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-24 min-h-screen mb-8 pt-12">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-10 sm:mb-6 lg:mb-6 pt-12">
         <div className="textoBasico">
           <div className="titulo-principal">
             <h1>Informe-se</h1>
           </div>
 
-          <section id="cards-about" className=" ">
-            <div className="flex flex-wrap px-2 gap-4 place-content-around">
-              <div className="w-full sm:w-full lg:w-1/2 px-1 flex items-center">
+          <section id="cards-about">
+            <div className=" px-2 gap-1 place-content-around">
+              <div className="w-full px-1 py-3 flex items-center">
                 <div className=" w-full  rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold ">
                     Objetivos
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
                     <p className="text-gray-600 text-base py-2">
                       Pesquisar políticas para a Educação Básica e suas relações
                       com os processos formativos na escola, levando em
@@ -40,12 +40,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-full sm:w-full lg:w-1/2 px-1 py-2 flex items-center order-1 lg:order-2">
-                <div className="w-full min-h-[400px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
+              <div className="w-full px-1 py-3 flex items-center">
+                <div className="w-full  rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Sobre nós
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
                     <h3>Grupos de Estudos</h3>
                     <ul>Objetivo:</ul>
                     <ul>Como participar:</ul>
@@ -61,15 +61,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="flex flex-wrap px-2 gap-4 place-content-around">
-              <div className="w-full sm:w-full lg:w-1/2 px-1 py-2 flex items-center">
-                <div className="w-full min-h-[400px]  rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
+              <div className="w-full px-1 py-3 flex items-center">
+                <div className="w-full  rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Projetos
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
                     <p className="text-gray-600 text-base py-2">
                       <ul>Descrição:</ul>O projeto de extensão tem como objetivo
                       oferecer à comunidade acadêmica da UNIPLAC experiências
@@ -92,12 +90,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="sm:w-full lg:w-1/2 px-1 py-2 flex items-center order-1 lg:order-2">
-                <div className="w-full min-h-[400px] rounded overflow-hidden shadow-lg my-2 bg-card-text py-6 px-4 bg-card">
+              <div className="w-full px-1 py-3 flex items-center">
+                <div className="min-h-[400px] rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold">
                     Produções
                   </h2>
-                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll">
+                  <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
                     <p className="text-gray-600 text-base py-2">
                       <ul>Artigos em perióticos e capítulos de livros:</ul>
                       <ul>
