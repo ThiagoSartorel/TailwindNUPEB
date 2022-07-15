@@ -16,7 +16,7 @@ function Post(props) {
 
         </div>
         <div>
-          <img
+          <img className="banner w-full h-80 sm:h-96 lg:h-64"
             src={props.image}
           ></img>
         </div>
@@ -56,7 +56,7 @@ export default function Noticias(props) {
           </select>
 
         </div>
-        <div className="container mx-auto grid px-2 grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="container mx-auto grid px-4 sm:px-0 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
           {props.noticias.map((noticia) => {
             var data = noticia.created_at
