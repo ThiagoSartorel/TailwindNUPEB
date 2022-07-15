@@ -33,7 +33,7 @@ function Post(props) {
 
 export default function Noticias(props) {
   return (
-    <div className="min-h-screen pt-14 mb-0 sm:mb-20 drop-shadow-xl">
+    <div className="min-h-screen pt-12 mb-16 sm:mb-2 md:mb-2 lg:mb-4 xl:mb-16 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
         <div className="absolute tracking-widest items-center w-full text-md sm:pt-2 sm:text-6xl md:pt-20 md:text-8xl xl:pt-40 xl:text-8xl">
           <h1 className="text-center">B L O G</h1>
@@ -56,7 +56,7 @@ export default function Noticias(props) {
           </select>
 
         </div>
-        <div className="container mx-auto grid px-4 sm:px-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-16 container mx-auto grid px-4 sm:px-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {props.noticias.map((noticia) => {
             var data = noticia.created_at
