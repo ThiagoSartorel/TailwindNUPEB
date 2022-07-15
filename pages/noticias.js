@@ -16,7 +16,7 @@ function Post(props) {
 
         </div>
         <div>
-          <img
+          <img className="banner w-full h-80 sm:h-96 lg:h-64"
             src={props.image}
           ></img>
         </div>
@@ -33,9 +33,9 @@ function Post(props) {
 
 export default function Noticias(props) {
   return (
-    <div className="min-h-screen pt-14 mb-16 drop-shadow-xl">
+    <div className="min-h-screen pt-14 mb-0 sm:mb-20 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
-        <div className="absolute tracking-widest items-center w-full text-md sm:pt-10 sm:text-6xl md:pt-20 md:text-8xl xl:pt-40 xl:text-8xl">
+        <div className="absolute tracking-widest items-center w-full text-md sm:pt-2 sm:text-6xl md:pt-20 md:text-8xl xl:pt-40 xl:text-8xl">
           <h1 className="text-center">B L O G</h1>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -47,8 +47,8 @@ export default function Noticias(props) {
         </svg>
       </div>
       <div>
-        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 pr-4">
-          <FaFilter className="my-2" />
+        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4">
+          <FaFilter className="my-2 mx-3" />
           <select className="rounded-md px-2 py-1">
             <option disabled defaultChecked>Filtro</option>
             <option>Noticias</option>
@@ -56,7 +56,7 @@ export default function Noticias(props) {
           </select>
 
         </div>
-        <div className="container mx-auto grid px-2 grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="container mx-auto grid px-4 sm:px-0 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
           {props.noticias.map((noticia) => {
             var data = noticia.created_at

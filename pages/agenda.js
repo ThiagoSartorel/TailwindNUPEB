@@ -5,17 +5,17 @@ import { FaSearch } from "react-icons/fa";
 export default function Calendario() {
   return (
     <div id="contact" className="">
-      <div className="mb-20 pt-12 mx-4 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-28 min-h-screen">
+      <div className="mb-20 sm:mb-0 pt-12 mx-4 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-28 min-h-screen">
         <p className="titulo-principal">Agenda</p>
         <div className="shadow-md">
-          <div className=" bg-card p-12 rounded-md">
+          <div className=" bg-card py-4 sm:p-4 rounded-md">
             <div className="flex flex-col sm:justify-between sm:flex-row">
               <div>
-                <input className="mb-4 px-2 py-1 w-auto rounded-xl bg-slate-200 opacity-80" type="month"></input>
+                <input className="mb-4 mt-2 ml-4 mr-4 px-2 py-1 w-auto rounded-xl bg-slate-200 opacity-80" type="month"></input>
               </div>
 
               <div className="flex flex-initial ">
-                <div className="bg-gray-200 text-white flex justify-between items-center w-full m-auto p-2 rounded-2xl px-4 mx-6 mb-4">
+                <div className="bg-gray-200 text-white flex justify-between items-center ml-4 mr-4 p-2 rounded-2xl px-4 mb-4">
                   <div>
                     <input
                       type="text"
