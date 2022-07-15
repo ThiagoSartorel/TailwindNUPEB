@@ -47,16 +47,16 @@ export default function Noticias(props) {
         </svg>
       </div>
       <div>
-        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4">
+        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4">
           <FaFilter className="my-2 mx-3" />
-          <select className="rounded-md px-2 py-1">
+          <select className="rounded-md px-4 py-1">
             <option disabled defaultChecked>Filtro</option>
             <option>Noticias</option>
             <option>Eventos</option>
           </select>
 
         </div>
-        <div className="container mx-auto grid px-4 sm:px-0 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="container mx-auto grid px-4 sm:px-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {props.noticias.map((noticia) => {
             var data = noticia.created_at
