@@ -32,6 +32,7 @@ function Post(props) {
 
 
 export default function Noticias(props) {
+  console.log(props)
   return (
     <div className="min-h-screen pt-12 mb-16 sm:mb-2 md:mb-2 lg:mb-4 xl:mb-16 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
@@ -49,10 +50,13 @@ export default function Noticias(props) {
       <div>
         <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4">
           <FaFilter className="my-2 mx-3" />
+
           <select className="rounded-md px-4 py-1">
-            <option disabled defaultChecked>Filtro</option>
-            <option>Noticias</option>
-            <option>Eventos</option>
+          <option disabled defaultChecked>Filtro</option>
+            {props.newCategories.map((newCategory) => {
+              return(<option>{newCategory.category_name}</option>)
+            })}
+           
           </select>
 
         </div>
@@ -70,13 +74,17 @@ export default function Noticias(props) {
   );
 }
 
+
 export async function getServerSideProps(context) {
   var noticias = await axios.get('http://172.16.248.88:3333/news/')
-
   noticias = noticias.data
 
+  var newCategories = await axios.get('http://172.16.248.88:3333/newCategories/')
+  newCategories = newCategories.data
+  //console.log (newCategories)
+
   return {
-    props: { noticias }, // will be passed to the page component as props
+    props: { noticias, newCategories }, // will be passed to the page component as props
   }
 }
 
