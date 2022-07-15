@@ -16,7 +16,11 @@ async function auth(data) {
     })
     console.log(retorno)
     console.log("usuario logado com sucesso")
-    Router.push("http://localhost:3001/auth/" + retorno.data.token)
+    nookies.set(null, 'nupeb-auth', retorno.data.token, {
+      maxAge: 60 * 60 * 1,
+      path: '/'
+    });
+    Router.push("http://localhost:3001")
     console.log(retorno)
   }
   catch (e) {
