@@ -19,7 +19,6 @@ var featuredProducts = [];
 let count = 0;
 let slideInterval;
 export default function Slider(props) {
-  console.log(props)
 
   featuredProducts = props.imagens;
 
