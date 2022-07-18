@@ -4,12 +4,18 @@ import DropDown from "./components/DropDown";
 import Slider from "./components/Slide";
 import Post from "./components/Post";
 import Contact from "./contact";
+import axios from "axios";
 
-export default function Home() {
+const imagens = []
+
+export default function Home(props) {
+  for (let i = 0; i < props.banner.length; i++) {
+    imagens.push(props.banner[i].id)
+  }
   return (
     <>
       <div className="pt-10">
-        <Slider />
+        <Slider imagens={imagens} />
       </div>
 
       <div className="text-center p-6 bg-slate-500 bg-opacity-10">
@@ -37,3 +43,9 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  var banner = await axios.get(process.env.BACKEND + "banners2/listActive");
+  return { props: { banner: banner.data } };
+}
+
