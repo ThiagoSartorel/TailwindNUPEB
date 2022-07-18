@@ -1,9 +1,16 @@
-import { FaFilter } from 'react-icons/fa';
-import axios from 'axios';
+import { FaFilter } from "react-icons/fa";
+import axios from "axios";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 function Post(props) {
   var conteudo = props.content;
-  conteudo = (conteudo.length > 85) ? conteudo.slice(0, 85) + "..." : conteudo //encurtador de descrição
+  conteudo = conteudo.length > 85 ? conteudo.slice(0, 85) + "..." : conteudo; //encurtador de descrição
+  
+  var data = props.date;
+  data = new Date(data).toLocaleDateString("pt-BR", {
+    timeZone: "UTC",
+  });
 
   return (
     <a href={"/noticia_evento/" + props.id}>
@@ -12,17 +19,21 @@ function Post(props) {
           <h4 className="font-semibold text-center pt-2 text-base sm:text-lg md:text-2xl">
             {props.title}
           </h4>
-          <p className="text-gray-500 text-end text-sm">{props.date}</p>
-
+          <p className="text-gray-500 text-end text-sm">{data}</p>
         </div>
         <div>
-          <img className="banner w-full h-80 sm:h-96 lg:h-64"
+          <img
+            className="banner w-full h-80 sm:h-96 lg:h-64"
             src={props.image}
           ></img>
         </div>
-        <div className="p-4 bg-slate-200 h-auto sm:h-24 md:h-20 lg:h-16">{conteudo}</div>
+        <div className="p-4 bg-slate-200 h-auto sm:h-24 md:h-20 lg:h-16">
+          {conteudo}
+        </div>
         <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
-          <span className="text-gray-500 text-sm text-left">by {props.author}</span>
+          <span className="text-gray-500 text-sm text-left">
+            by {props.author}
+          </span>
           <p className="text-gray-500 text-left text-sm">{props.category}</p>
         </div>
       </div>
@@ -30,8 +41,55 @@ function Post(props) {
   );
 }
 
-
 export default function Noticias(props) {
+  const [filtro, setFiltro] = useState("");
+  const { register, handleSubmit } = useForm();
+  console.log(props);
+
+  function reload(){
+    if (typeof document != "undefined"){
+      var value = document.getElementById("selectFiltro").value
+      setFiltro(value)
+    }
+  }
+
+  function getFiltro() {
+    if (typeof document != "undefined") {
+      var valueSelect = document.getElementById("selectFiltro").value;
+      if(valueSelect == 0){
+        return props.noticias.map((itemNew) => (
+          
+          <Post
+            id={itemNew.id}
+            title={itemNew.title}
+            content={itemNew.description}
+            author="AutorPost"
+            category="CategoriaPost"
+            date={itemNew.created_at}
+            image={process.env.BACKEND + "showFile/" + itemNew.file_id}
+          />
+        ));
+      }
+    } 
+
+    var noticias = props.noticias.filter(oneNew => oneNew.new_category_id == valueSelect);
+    console.log("--------------------")  
+    console.log(noticias)
+
+    return noticias.map((itemNew) => (
+      
+      <Post
+        id={itemNew.id}
+        title={itemNew.title}
+        content={itemNew.description}
+        author="AutorPost"
+        category="CategoriaPost"
+        date={itemNew.created_at}
+        image={process.env.BACKEND + "showFile/" + itemNew.file_id}
+      />
+    ));
+  }
+
   return (
     <div className="min-h-screen pt-12 mb-16 sm:mb-2 md:mb-2 lg:mb-4 xl:mb-16 drop-shadow-xl">
       <div className="text-[3rem] text-center text-white font-bold">
@@ -47,23 +105,31 @@ export default function Noticias(props) {
         </svg>
       </div>
       <div>
-        <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4">
-          <FaFilter className="my-2 mx-3" />
-          <select className="rounded-md px-4 py-1">
-            <option disabled defaultChecked>Filtro</option>
-            <option>Noticias</option>
-            <option>Eventos</option>
-          </select>
+        <form>
+          <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4">
+            <FaFilter className="my-2 mx-3" />
 
-        </div>
+            <select
+              className="rounded-md px-4 py-1"
+              id="selectFiltro"
+              onChange={reload}
+            >
+              <option defaultChecked value={0}>
+                Todos
+              </option>
+              {props.newCategories.map((newCategory) => {
+                return (
+                  <option value={newCategory.id}>
+                    {newCategory.category_name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </form>
+
         <div className="mb-16 container mx-auto grid px-4 sm:px-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          {props.noticias.map((noticia) => {
-            var data = noticia.created_at
-            data = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' })
-            return <Post id={noticia.id} title={noticia.title} content={noticia.description} author="AutorPost" category="CategoriaPost" date={data} image={process.env.BACKEND + 'showFile/' + noticia.file_id} />
-          })}
-
+          {getFiltro()}
         </div>
       </div>
     </div>
@@ -71,12 +137,51 @@ export default function Noticias(props) {
 }
 
 export async function getServerSideProps(context) {
-  var noticias = await axios.get('http://172.16.248.88:3333/news/')
+  var noticias = await axios.get("http://172.16.248.88:3333/news/");
+  noticias = noticias.data;
 
-  noticias = noticias.data
+  var newCategories = await axios.get(
+    "http://172.16.248.88:3333/newCategories/"
+  );
+  newCategories = newCategories.data;
+  //console.log (newCategories)
 
   return {
-    props: { noticias }, // will be passed to the page component as props
-  }
+    props: { noticias, newCategories }, // will be passed to the page component as props
+  };
 }
 
+//{props.noticias.map((noticia) => {
+//  var data = noticia.created_at;
+//  data = new Date(data).toLocaleDateString("pt-BR", {
+//    timeZone: "UTC",
+//  });
+//
+//  return (
+//    <Post
+//      id={noticia.id}
+//      title={noticia.title}
+//      content={noticia.description}
+//      author="AutorPost"
+//      category="CategoriaPost"
+//      date={data}
+//      image={process.env.BACKEND + "showFile/" + noticia.file_id}
+//    />
+//  );
+//})}
+
+//function getFiltro(){
+//  if (typeof document != "undefined") {
+//    var valueSelect = document.getElementById("selectFiltro").value;
+//    props.noticias.map((itemNew) => {
+//      var data = itemNew.created_at;
+//      data = new Date(data).toLocaleDateString("pt-BR", {
+//        timeZone: "UTC",
+//      });
+//      console.log(data);
+//      return (<div>zsaddddddddddddddddd</div>);
+//    })
+//  }
+//  console.log(props);
+//;
+//};
