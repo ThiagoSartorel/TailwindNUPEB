@@ -1,23 +1,27 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
 import axios from "axios"
+import { propTypesContent } from "@material-tailwind/react/types/components/popover";
 
-var featuredProducts = [{"url":"loader", "alt":"Loader"}];
+var featuredProducts = [];
 //  "imageSlide/Kisses.jpg",
 //  "imageSlide/Nietzsche.jpg",
 //  "imageSlide/Twoface.png",
 
-async function getBanner(){
-  const banner = await axios.get(process.env.BACKEND + 'banners2/listActive')
-  //console.log(banner.data)
-  featuredProducts = banner.data;
-}
+//async function getBanner(){
+//  const banner = await axios.get(process.env.BACKEND + 'banners2/listActive')
+//  //console.log(banner.data)
+//  featuredProducts = banner.data;
+//}
 
-getBanner();
+//getBanner();
 
 let count = 0;
 let slideInterval;
 export default function Slider(props) {
+  console.log(props)
+
+  featuredProducts = props.imagens;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -63,7 +67,7 @@ export default function Slider(props) {
   return (
     <div ref={slideRef} className="w-full select-none relative drop-shadow-xl ">
       <div className="aspect-w-16 aspect-h-9"> 
-        <img src={"http://172.16.248.88:3333/images/" + featuredProducts[currentIndex].url} alt={featuredProducts[currentIndex].alt} className="banner w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
+        <img src={process.env.BACKEND + "images/" + featuredProducts[currentIndex]} alt={featuredProducts[currentIndex]} className="banner w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
       </div>
 
       <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
