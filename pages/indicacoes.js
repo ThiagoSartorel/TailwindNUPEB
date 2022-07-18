@@ -20,11 +20,11 @@ export default function Home() {
 
         <div className=" text-white flex justify-between items-center max-w-[400px] w-full m-auto p-2 rounded-2xl">
             <div className="flex flex-initial ">
-              <div className=" text-white flex items-center w-full m-auto p-2 rounded-2xl px-4 mx-16 mb-4 bg-slate-100">
+              <div className=" text-white flex items-center w-full m-auto p-2 rounded-2xl px-4 mx-20 mb-4 bg-slate-100">
                 <div>
                   <input
                     type="text"
-                    className="bg-transparent border-none text-white focus:outline-none"
+                    className="bg-transparent border-none text-black focus:outline-none"
                     placeholder="Pesquisar"
                   />
                 </div>
