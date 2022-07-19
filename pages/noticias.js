@@ -44,7 +44,6 @@ function Post(props) {
 export default function Noticias(props) {
   const [filtro, setFiltro] = useState("");
   const { register, handleSubmit } = useForm();
-  console.log(props);
 
   function reload() {
     if (typeof document != "undefined") {
@@ -71,13 +70,10 @@ export default function Noticias(props) {
       }
     }
 
-    var noticias = props.noticias.filter(
-      (oneNew) => oneNew.new_category_id == valueSelect
-    );
-    console.log("--------------------");
-    console.log(noticias);
+    var noticias = props.noticias.filter(oneNew => oneNew.new_category_id == valueSelect);
 
     return noticias.map((itemNew) => (
+
       <Post
         id={itemNew.id}
         title={itemNew.title}
@@ -143,48 +139,14 @@ export async function getServerSideProps(context) {
   var noticias = await axios.get("http://172.16.248.88:3333/news/");
   noticias = noticias.data;
 
-  var newCategories = await axios.get(
-    "http://172.16.248.88:3333/newCategories/"
-  );
+  var newCategories = await axios.get
+    (process.env.BACKEND + "newCategories/");
   newCategories = newCategories.data;
-  //console.log (newCategories)
+
 
   return {
     props: { noticias, newCategories }, // will be passed to the page component as props
   };
 }
 
-//{props.noticias.map((noticia) => {
-//  var data = noticia.created_at;
-//  data = new Date(data).toLocaleDateString("pt-BR", {
-//    timeZone: "UTC",
-//  });
-//
-//  return (
-//    <Post
-//      id={noticia.id}
-//      title={noticia.title}
-//      content={noticia.description}
-//      author="AutorPost"
-//      category="CategoriaPost"
-//      date={data}
-//      image={process.env.BACKEND + "showFile/" + noticia.file_id}
-//    />
-//  );
-//})}
 
-//function getFiltro(){
-//  if (typeof document != "undefined") {
-//    var valueSelect = document.getElementById("selectFiltro").value;
-//    props.noticias.map((itemNew) => {
-//      var data = itemNew.created_at;
-//      data = new Date(data).toLocaleDateString("pt-BR", {
-//        timeZone: "UTC",
-//      });
-//      console.log(data);
-//      return (<div>zsaddddddddddddddddd</div>);
-//    })
-//  }
-//  console.log(props);
-//;
-//};
