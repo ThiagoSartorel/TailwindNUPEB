@@ -2,7 +2,7 @@ import axios from "axios";
 
 async function getNoticias() {
   const retorno = await axios.get(process.env.BACKEND + "news");
-  //console.log(retorno.data)
+
   if (typeof document != "undefined") {
     for (let i = 0; i < 3; i++) {
       var conteudo = retorno.data[i].description;
@@ -13,9 +13,10 @@ async function getNoticias() {
       document.getElementById("D" + (i + 1)).innerHTML = conteudo;
       document.getElementById("DT" + (i + 1)).innerHTML =
         dataNoticia.toLocaleDateString("pt-BR", { timeZone: "UTC" });
-      document.getElementById("I" + (i + 1)).src = process.env.BACKEND + 'showFile/' + retorno.data[i].file_id 
+      document.getElementById("I" + (i + 1)).src =
+        process.env.BACKEND + "showFile/" + retorno.data[i].file_id;
       document.getElementById("BT" + (i + 1)).href =
-        "/noticia_evento/" + retorno.data[i].id;
+        "/post/" + retorno.data[i].id;
     }
   }
 }
@@ -64,8 +65,8 @@ export default function GridNoticia() {
             Autor
           </a>
         </div>
-        <div >
-          <img  className="banner w-full h-80 sm:h-96 lg:h-64" id="I2"></img>
+        <div>
+          <img className="banner w-full h-80 sm:h-96 lg:h-64" id="I2"></img>
         </div>
         <div
           className="p-4 bg-slate-200 h-26 sm:h-28 md:h-20 lg:h-36 xl:h-24"
@@ -96,7 +97,7 @@ export default function GridNoticia() {
           </a>
         </div>
         <div>
-          <img  className="banner w-full h-80 sm:h-96 lg:h-64" id="I3"></img>
+          <img className="banner w-full h-80 sm:h-96 lg:h-64" id="I3"></img>
         </div>
         <div
           className="p-4 bg-slate-200 h-26 sm:h-28 md:h-20 lg:h-36 xl:h-24"

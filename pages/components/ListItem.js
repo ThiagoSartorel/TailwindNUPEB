@@ -1,4 +1,4 @@
-export default function ListItem({ movie }) {
+export default function ListItem() {
   return (
     <article className="flex items-start space-x-6 p-6">
       <img
@@ -8,7 +8,7 @@ export default function ListItem({ movie }) {
       />
       <div className="min-w-0 relative flex-auto">
         <h2 className="font-semibold text-slate-900 truncate pr-20">
-          {"Titulo do Filme"}
+          {"Titulo"}
         </h2>
         <dl className="mt-2 flex flex-wrap text-sm leading-6 font-medium">
           <div className="absolute top-0 right-0 flex items-center space-x-1">
@@ -55,24 +55,10 @@ export default function ListItem({ movie }) {
               {"Subcategoria"}
             </dd>
           </div>
-          <div>
-            <dt className="sr-only">Tempo de Filme</dt>
-            <dd className="flex items-center">
-              <svg
-                width="2"
-                height="2"
-                fill="currentColor"
-                className="mx-2 text-slate-300"
-                aria-hidden="true"
-              >
-                <circle cx="1" cy="1" r="1" />
-              </svg>
-              {"Tempo de Filme"}
-            </dd>
-          </div>
+          <div></div>
           <div className="flex-none w-full mt-2 font-normal">
-            <dt className="sr-only">Elenco do filme</dt>
-            <dd className="text-slate-400">{"Elenco do filme"}</dd>
+            <dt className="sr-only">Descrição</dt>
+            <dd className="text-slate-400">{"Descrição"}</dd>
           </div>
         </dl>
       </div>

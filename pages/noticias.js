@@ -13,7 +13,7 @@ function Post(props) {
   });
 
   return (
-    <a href={"/noticia_evento/" + props.id}>
+    <a href={"/post/" + props.id}>
       <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
         <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
           <h4 className="font-semibold text-center pt-2 text-base sm:text-lg md:text-2xl">
@@ -43,7 +43,6 @@ function Post(props) {
 
 export default function Noticias(props) {
   const [filtro, setFiltro] = useState("");
-  const { register, handleSubmit } = useForm();
 
   function reload() {
     if (typeof document != "undefined") {
@@ -52,17 +51,37 @@ export default function Noticias(props) {
     }
   }
 
+  function getCategoria(id){
+    switch(id){
+      case 1:
+        return "Post"
+      
+      case 2:
+        return "Notícia"
+      
+      case 3:
+        return "Artigo"
+
+      case 4:
+        return "Evento"
+
+      case null:
+        return "Não cadastrado"
+    }
+  }
+
   function getFiltro() {
     if (typeof document != "undefined") {
       var valueSelect = document.getElementById("selectFiltro").value;
       if (valueSelect == 0) {
-        return props.noticias.map((itemNew) => (
+        console.log(props.noticias)
+        return props.noticias.map((itemNew) => (  
           <Post
             id={itemNew.id}
             title={itemNew.title}
             content={itemNew.description}
             author="AutorPost"
-            category="CategoriaPost"
+            category={getCategoria(itemNew.new_category_id)}
             date={itemNew.created_at}
             image={process.env.BACKEND + "showFile/" + itemNew.file_id}
           />
@@ -79,7 +98,7 @@ export default function Noticias(props) {
         title={itemNew.title}
         content={itemNew.description}
         author="AutorPost"
-        category="CategoriaPost"
+        category={getCategoria(itemNew.new_category_id)}
         date={itemNew.created_at}
         image={process.env.BACKEND + "showFile/" + itemNew.file_id}
       />
@@ -136,7 +155,7 @@ export default function Noticias(props) {
 }
 
 export async function getServerSideProps(context) {
-  var noticias = await axios.get("http://172.16.248.88:3333/news/");
+  var noticias = await axios.get(process.env.BACKEND+"news/");
   noticias = noticias.data;
 
   var newCategories = await axios.get

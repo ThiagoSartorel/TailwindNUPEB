@@ -1,20 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
-import axios from "axios"
-import { propTypesContent } from "@material-tailwind/react/types/components/popover";
 
 var featuredProducts = [];
-//  "imageSlide/Kisses.jpg",
-//  "imageSlide/Nietzsche.jpg",
-//  "imageSlide/Twoface.png",
-
-//async function getBanner(){
-//  const banner = await axios.get(process.env.BACKEND + 'banners2/listActive')
-//  //console.log(banner.data)
-//  featuredProducts = banner.data;
-//}
-
-//getBanner();
 
 let count = 0;
 let slideInterval;

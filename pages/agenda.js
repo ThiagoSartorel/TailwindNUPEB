@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { BsSearch } from "react-icons/bs";
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 
 export default function Calendario() {
@@ -66,33 +65,6 @@ export default function Calendario() {
                 <div>
                   <img
                     src="https://source.unsplash.com/1920x1080/?book"
-                    className=""
-                  ></img>
-                </div>
-                <div className="p-4 bg-slate-200">Conteudo</div>
-                <div className=" bg-gray-100 p-2 border-b border-gray-100 pb-3">
-                  <a
-                    href="/noticia_evento"
-                    className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute"
-                  >
-                    Saiba mais
-                  </a>
-                  <p className="text-gray-500 text-end mt-2 text-sm">
-                    24/06/2022
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-100 p4 rounded-lg shadow-md overflow-hidden">
-                <div className=" bg-gray-100 p-2 border-b border-gray-00">
-                  <h4 className="font-semibold text-lg">Titulo do evento</h4>
-                  <a href="/perfil_autor" className="font-thin">
-                    Autor
-                  </a>
-                </div>
-                <div>
-                  <img
-                    src="https://source.unsplash.com/1920x1080/?study"
                     className=""
                   ></img>
                 </div>

@@ -1,9 +1,3 @@
-import GridNoticia from "./components/GridNoticia";
-import DropDown from "./components/DropDown";
-import Slider from "./components/Slide";
-import Post from "./components/Post";
-import Contact from "./contact";
-
 export default function Home() {
   return (
     <>
@@ -31,7 +25,7 @@ export default function Home() {
                     <br></br>
                     <h3>Missão:</h3>
 
-                    <br></br>
+                    <br></br>  
                     <h3>Visão:</h3>
 
                     <br></br>
