@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 function Post(props) {
   var conteudo = props.content;
   conteudo = conteudo.length > 85 ? conteudo.slice(0, 85) + "..." : conteudo; //encurtador de descrição
-  
+
   var data = props.date;
   data = new Date(data).toLocaleDateString("pt-BR", {
     timeZone: "UTC",
@@ -46,19 +46,18 @@ export default function Noticias(props) {
   const { register, handleSubmit } = useForm();
   console.log(props);
 
-  function reload(){
-    if (typeof document != "undefined"){
-      var value = document.getElementById("selectFiltro").value
-      setFiltro(value)
+  function reload() {
+    if (typeof document != "undefined") {
+      var value = document.getElementById("selectFiltro").value;
+      setFiltro(value);
     }
   }
 
   function getFiltro() {
     if (typeof document != "undefined") {
       var valueSelect = document.getElementById("selectFiltro").value;
-      if(valueSelect == 0){
+      if (valueSelect == 0) {
         return props.noticias.map((itemNew) => (
-          
           <Post
             id={itemNew.id}
             title={itemNew.title}
@@ -70,14 +69,15 @@ export default function Noticias(props) {
           />
         ));
       }
-    } 
+    }
 
-    var noticias = props.noticias.filter(oneNew => oneNew.new_category_id == valueSelect);
-    console.log("--------------------")  
-    console.log(noticias)
+    var noticias = props.noticias.filter(
+      (oneNew) => oneNew.new_category_id == valueSelect
+    );
+    console.log("--------------------");
+    console.log(noticias);
 
     return noticias.map((itemNew) => (
-      
       <Post
         id={itemNew.id}
         title={itemNew.title}
@@ -105,9 +105,9 @@ export default function Noticias(props) {
         </svg>
       </div>
       <div>
-        <form>
-          <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4">
-            <FaFilter className="my-2 mx-3" />
+        <form className="flex flex-initial px-5">
+          <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4  items-center">
+            <FaFilter className="my-2 mx-1" />
 
             <select
               className="rounded-md px-4 py-1"
@@ -125,6 +125,9 @@ export default function Noticias(props) {
                 );
               })}
             </select>
+            <a href="lista_autores" className="w-full text-start cursor-pointer hover:text-lg h-4">
+              Autores
+            </a>
           </div>
         </form>
 

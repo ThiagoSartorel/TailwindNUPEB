@@ -2,7 +2,7 @@ import Noticias from "../../bd/Noticias";
 
 export default function Post() {
   return (
-    <div className="container mx-auto px-2 grid grid-cols-2 gap-6">
+    <div className="container mx-auto px-2 ">
       <a href="/noticia_evento">
         <div className="bg-gray-100 rounded-lg shadow-md overflow-hidden">
           <div className="w-full bg-gray-100 p-2 border-b border-gray-100">
