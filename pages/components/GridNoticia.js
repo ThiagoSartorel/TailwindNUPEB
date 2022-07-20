@@ -24,7 +24,7 @@ export default function GridNoticia(props) {
     </div>
     <div className="w-full bg-gray-100 p-2 border-b border-gray-100 pb-3">
       <a
-        href={"/noticia_evento/" + props.id}
+        href={"/post/" + props.id}
         className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute"
       >
         Saiba mais

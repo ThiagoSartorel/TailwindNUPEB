@@ -54,6 +54,6 @@ export async function getServerSideProps() {
   var banner = await axios.get(process.env.BACKEND + "banners2/listActive");
   var noticias = await axios.get(process.env.BACKEND + "news");
 
-  return { props: { banner: banner.data, news: noticias.data } };
+  return { props: { banner: banner.data, news: noticias.data.news } };
 }
 

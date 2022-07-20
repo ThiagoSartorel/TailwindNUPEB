@@ -156,7 +156,7 @@ export default function Noticias(props) {
 
 export async function getServerSideProps(context) {
   var noticias = await axios.get(process.env.BACKEND+"news/");
-  noticias = noticias.data;
+  noticias = noticias.data.news;
 
   var newCategories = await axios.get
     (process.env.BACKEND + "newCategories/");

@@ -74,39 +74,5 @@ export default function Calendario(props) {
 
 export async function getServerSideProps() {
   var eventos = await axios.get(process.env.BACKEND + "news");
-  return { props: { eventos: eventos.data } };
+  return { props: { eventos: eventos.data.news } };
 }
-
-/* 
-                {props.eventos.map((evento) => {
-                  if(evento.new_category_id == 4){
-                    console.log(filtro)
-                    return <GridNoticia title={evento.title} description={evento.description} image={evento.file_id} date={evento.created_at} author={evento.user_id} />;
-                  }
-                })}*/
-
-
-/*
-        return (
-          eventos.map((evento) => {
-            if (evento.new_category_id == 1) {
-              var eventData = evento.created_at.substr(0,7);
-
-              if(eventData == value){
-                console.log("acertou")
-              }
-
-              return (
-                <GridNoticia
-                  id={evento.id}
-                  title={evento.title}
-                  description={evento.description}
-                  author={evento.user_id}
-                  date={evento.created_at}
-                  image={evento.file_id}
-                />
-              )
-            }
-          })
-        );
-*/
