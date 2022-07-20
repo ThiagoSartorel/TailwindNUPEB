@@ -12,6 +12,7 @@ export default function Home(props) {
   for (let i = 0; i < props.banner.length; i++) {
     imagens.push(props.banner[i].id)
   }
+  var contador = 0;
   return (
     <>
       <div className="pt-10">
@@ -38,7 +39,15 @@ export default function Home(props) {
         <div className="text-[3rem] text-center font-semibold text-2xl tracking-widest uppercase text-gray-700 py-8">
           <h1>Últimas notícias</h1>
         </div>
-        <GridNoticia />
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 px-4 gap-4">
+          {props.news.map((oneNew) => {
+            contador ++;
+            if(contador > 3){
+              return
+            }
+            return <GridNoticia title={oneNew.title} description={oneNew.description} author={oneNew.user_id + "user"} date={oneNew.created_at} image={oneNew.file_id} />;
+          })}
+        </div>
       </div>
     </>
   );
@@ -46,6 +55,8 @@ export default function Home(props) {
 
 export async function getServerSideProps() {
   var banner = await axios.get(process.env.BACKEND + "banners2/listActive");
-  return { props: { banner: banner.data } };
+  var noticias = await axios.get(process.env.BACKEND + "news");
+
+  return { props: { banner: banner.data, news: noticias.data } };
 }
 
