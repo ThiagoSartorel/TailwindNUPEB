@@ -42,7 +42,7 @@ export default function Home(props) {
             if(contador > 3){
               return
             }
-            return <GridNoticia title={oneNew.title} description={oneNew.description} author={oneNew.user_id + "user"} date={oneNew.created_at} image={oneNew.file_id} />;
+            return <GridNoticia id={oneNew.id} title={oneNew.title} description={oneNew.description} author={oneNew.user_id + "user"} date={oneNew.created_at} image={oneNew.file_id} />;
           })}
         </div>
       </div>

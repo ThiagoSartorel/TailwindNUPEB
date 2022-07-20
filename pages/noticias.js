@@ -74,7 +74,7 @@ export default function Noticias(props) {
     if (typeof document != "undefined") {
       var valueSelect = document.getElementById("selectFiltro").value;
       if (valueSelect == 0) {
-        console.log(props.noticias)
+        //console.log(props.noticias)
         return props.noticias.map((itemNew) => (  
           <Post
             id={itemNew.id}
