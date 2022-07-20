@@ -1,9 +1,3 @@
-import GridNoticia from "./components/GridNoticia";
-import DropDown from "./components/DropDown";
-import Slider from "./components/Slide";
-import Post from "./components/Post";
-import Contact from "./contact";
-
 export default function Home() {
   return (
     <>

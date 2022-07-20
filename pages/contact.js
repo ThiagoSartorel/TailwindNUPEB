@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaLinkedinIn, FaFacebook, FaInstagram } from "react-icons/fa";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 const copyToClipboardEmail = () => {
   navigator.clipboard.writeText("nupebuniplac@gmail.com");
