@@ -12,7 +12,7 @@ export default function Home() {
               <div className="w-full px-1 py-3 flex items-center">
                 <div className=" w-full  rounded overflow-hidden shadow-lg bg-card-text py-6 px-4 bg-card">
                   <h2 className="text-2xl text-gray-700 text-center py-1 font-bold ">
-                    Objetivos
+                    Objetivos específicos
                   </h2>
                   <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
                     <p className="text-gray-600 text-base py-2">
