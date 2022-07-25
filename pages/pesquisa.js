@@ -1,3 +1,5 @@
+import Gridpesquisa from "./components/GridPesquisa";
+
 export default function Home() {
   return (
     <>
@@ -5,6 +7,10 @@ export default function Home() {
         <div className="texto-basico">
           <h2 className="titulo-principal">Linhas de Pesquisa</h2>
         </div>
+        <div className="mb-6">
+        <Gridpesquisa />
+        </div>
+    
         <section id="cards-about">
           <div className="flex flex-wrap   ">
             <div className="w-full px-4 flex items-center">

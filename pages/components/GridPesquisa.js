@@ -1,14 +1,14 @@
 export default function Gridpesquisa() {
   return (
-    <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 px-4 gap-4">
-      <div className=" p4 rounded-lg shadow-md overflow-hidden">
-        <div className="w-full bg-white bg-opacity-20 p-2 border-transparent ">
+    <div className="container mx-auto grid grid-cols-1 p-4 space-y-8">
+      <div className="bg-card">
+        <div className="w-full bg-white bg-opacity-20 p-2">
           <h4 className="font-semibold text-lg">
             Pedagogia da Infância, Políticas e Diferenças
           </h4>
         </div>
 
-        <div className="p-4 bg-white bg-opacity-20 overflow-auto touch-pan-y h-80 scroll">
+        <div className="p-4 overflow-auto touch-pan-y h-80 scroll">
           Objetivo: Investigar temas ligados à infância e às políticas
           educacionais, numa perspectiva pós-estruturalista, buscando ampliar o
           conhecimento sobre as metodologias de pesquisa com crianças, pesquisas
@@ -21,14 +21,14 @@ export default function Gridpesquisa() {
           <ul>Egressas(os) do Ensino Médio:</ul>
         </div>
       </div>
-      <div className=" p4 rounded-lg shadow-md overflow-hidden">
+      <div className="bg-card">
         <div className="w-full bg-white bg-opacity-20 p-2 border-transparent ">
           <h4 className="font-semibold text-lg">
             Comunicação, Divulgação Científica e Inovação
           </h4>
         </div>
 
-        <div className="p-4 bg-white bg-opacity-20 overflow-auto touch-pan-y h-80 scroll">
+        <div className="p-4 overflow-auto touch-pan-y h-80 scroll">
           Objetivo: Desenvolver pesquisas básicas e aplicadas na área da
           comunicação, divulgação científica e inovação.
           <ul>Coordenador(a):</ul>
@@ -38,14 +38,14 @@ export default function Gridpesquisa() {
           <ul>Egressas(os) do Ensino Médio:</ul>
         </div>
       </div>
-      <div className=" p4 rounded-lg shadow-md overflow-hidden">
+      <div className="bg-card">
         <div className="w-full bg-white bg-opacity-20 p-2 border-transparent ">
           <h4 className="font-semibold text-lg">
             Formação de professores e Cotidiano escolar
           </h4>
         </div>
 
-        <div className="p-4 bg-white bg-opacity-20 overflow-auto touch-pan-y h-80 scroll">
+        <div className="p-4 overflow-auto touch-pan-y h-80 scroll">
           Objetivo: Investigar os processos formativos no ambiente educacional,
           abrangendo os diferentes focos das políticas para a Educação Básica
           como formação inicial e continuada de professores, avaliação,

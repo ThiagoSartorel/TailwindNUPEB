@@ -40,21 +40,6 @@ export default function ListItem() {
               {"Gênero"}
             </dd>
           </div>
-          <div>
-            <dt className="sr-only">Subcategoria</dt>
-            <dd className="flex items-center">
-              <svg
-                width="2"
-                height="2"
-                fill="currentColor"
-                className="mx-2 text-slate-300"
-                aria-hidden="true"
-              >
-                <circle cx="1" cy="1" r="1" />
-              </svg>
-              {"Subcategoria"}
-            </dd>
-          </div>
           <div></div>
           <div className="flex-none w-full mt-2 font-normal">
             <dt className="sr-only">Descrição</dt>
