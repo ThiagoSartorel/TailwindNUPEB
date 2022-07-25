@@ -1,7 +1,6 @@
 import { FaFilter } from "react-icons/fa";
 import axios from "axios";
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 
 function Post(props) {
   var conteudo = props.content;
@@ -80,7 +79,7 @@ export default function Noticias(props) {
             id={itemNew.id}
             title={itemNew.title}
             content={itemNew.description}
-            author="AutorPost"
+            author={itemNew.author.name}
             category={getCategoria(itemNew.new_category_id)}
             date={itemNew.created_at}
             image={process.env.BACKEND + "showFile/" + itemNew.file_id}

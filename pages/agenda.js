@@ -25,7 +25,8 @@ export default function Calendario(props) {
         <GridNoticia
           id={evento.id}
           title={evento.title}
-          author={evento.user_id}
+          id_author={evento.author_id}
+          author={evento.author.name}
           description={evento.description}
           image={evento.file_id}
           date={evento.created_at}
@@ -44,25 +45,12 @@ export default function Calendario(props) {
               <div>
                 <input className="mb-4 mt-2 ml-4 mr-4 px-2 py-1 w-auto rounded-xl bg-slate-200 opacity-80" type="month" id="selectFiltro" onChange={reload}></input>
               </div>
-
               <div className="flex flex-initial ">
-                <div className="bg-gray-200 text-white flex justify-between items-center ml-4 mr-4 p-2 rounded-2xl px-4 mb-4">
-                  <div>
-                    <input
-                      type="text"
-                      className="bg-transparent border-none text-black focus:outline-none"
-                      placeholder="Pesquisar"
-                    />
-                  </div>
-                  <FaSearch className="text-slate-400 hover:text-slate-600 hover:scale-110" />
-                </div>
               </div>
             </div>
             <hr className="mb-4"></hr>
             <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
-
               {getEventos()}
-
             </div>
           </div>
         </div>

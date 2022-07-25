@@ -10,16 +10,16 @@ export default function Perfil(props) {
       </div>
       <div className="grid gap-10 mx-auto lg:grid-cols-2 lg:max-w-screen-lg">
         {props.authors.map((author) => (
-          <AuthorCard name={author.name} image={author.photo_id} bio={author.bio.length > 80 ? HtmlParser(author.bio.substr(0,80) + "...") : HtmlParser(author.bio.substr(0,80))} whatsapp="" facebook="" twitter="" email="" instagram="" github="" youtube="" telephone="" linkedin="" website=""/>
+            <AuthorCard id={author.id} name={author.name} image={author.photo_id} bio={author.bio.length > 80 ? HtmlParser(author.bio.substr(0, 80) + "...") : HtmlParser(author.bio.substr(0, 80))} whatsapp="" facebook="" twitter="" email="" instagram="" github="" youtube="" telephone="" linkedin="" website="" />
         ))}
       </div>
     </div>
   );
 }
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
   const retorno = await axios.get(process.env.BACKEND + "authors/all");
-  console.log(retorno)
+  //console.log(retorno)
 
   return { props: { authors: retorno.data } };
 }

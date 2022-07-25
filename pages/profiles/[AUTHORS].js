@@ -85,6 +85,6 @@ export async function getStaticPaths(context) {
     const paths = posts.map((authors) => ({
         params: { AUTHORS: (authors.id.toString()) },
     }));
-    console.log(paths)
+    //console.log(paths)
     return { paths, fallback: true }
 }

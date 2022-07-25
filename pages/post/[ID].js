@@ -2,29 +2,28 @@ import axios from 'axios'
 import HtmlParser from 'react-html-parser';
 
 export default function Home(props) {
-  const img = "background-image: url(" + process.env.BACKEND + "showFile/" + props.id[0].file_id + ")"
+  const img = "background-image: url(" + process.env.BACKEND + "showFile/" + props.id.news[0].file_id + ")"
   if (typeof document != 'undefined') {
     document.getElementById("imagem").style = img;
   }
+  console.log()
 
   return (
     <>
 
       <div className="mx-5 sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-16 pt-12">
-        <h1 className="titulo-principal">{props.id[0].title}</h1>
+        <h1 className="titulo-principal">{props.id.news[0].title}</h1>
         <div className="w-full py-2 px-4 flex flex-col">
           <div className="w-full">
-            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{props.dataNoticia}</span> por <span className="text-blue-800">{props.id[0].user.name}</span></span>
+            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{props.dataNoticia}</span> por <span className="text-blue-800"><a href={"../profiles/" + props.id.news[0].author.id}> {props.id.news[0].author.name}</a></span></span>
           </div>
           <div className="w-full space-x-4 flex flex-row-reverse">
-            <span className="bg-gray-600 text-white rounded-md text-sm px-2 py-1 ml-4">Categoria</span>
-            <span className="bg-gray-400 text-white rounded-md text-sm px-2 py-1">Subcategoria</span>
-            <span className="bg-gray-400 text-white rounded-md text-sm px-2 py-1">Subcategoria</span>
+            <span className="bg-gray-600 text-white rounded-md text-sm px-2 py-1 ml-4">{props.id.news[0].newCategory.category_name}</span>
           </div>
         </div>
         <div id="imagem" className="lg:w-full lg:h-[650px] imagem-principal" />
-        <p className="text-md text-gray-500">{HtmlParser(props.id[0].description)}</p>
-        <p>{HtmlParser(props.id[0].content)}</p>
+        <p className="text-md text-gray-500">{HtmlParser(props.id.news[0].description)}</p>
+        <p>{HtmlParser(props.id.news[0].content)}</p>
       </div>
     </>
   );
@@ -38,8 +37,9 @@ export async function getStaticProps(context) {
 
   const retorno = await axios.get(process.env.BACKEND + 'news/' + codNoticia);
   var id = retorno.data;
+  //console.log(retorno.data);
 
-  var dataNoticia = new Date(retorno.data[0].created_at);
+  var dataNoticia = new Date(retorno.data.news[0].created_at);
 
   var day = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"][dataNoticia.getDay()];
   var date = dataNoticia.getDate();
@@ -57,7 +57,7 @@ export async function getStaticPaths(context) {
   const res = await fetch(process.env.BACKEND + 'news')
   const posts = await res.json()
   // Get the paths we want to pre-render based on posts
-  const paths = posts.map((news) => ({
+  const paths = posts.news.map((news) => ({
     params: { ID: (news.id.toString()) },
   }));
   return { paths, fallback: true }

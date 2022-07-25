@@ -98,10 +98,11 @@ export default function Home(props) {
             }
             return (
               <GridNoticia
+                id_author={oneNew.author_id}
                 id={oneNew.id}
                 title={oneNew.title}
                 description={oneNew.description}
-                author={oneNew.user_id + "user"}
+                author={oneNew.author.name}
                 date={oneNew.created_at}
                 image={oneNew.file_id}
               />
