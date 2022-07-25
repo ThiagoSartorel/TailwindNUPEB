@@ -20,7 +20,7 @@ export default function AuthorCard(props) {
   }
 
   return (
-    <a href="perfil_autor">
+    <a>
       <div className="grid grid-cols-1 sm:grid-cols-3 border-b-white border-2 pb-8 md:pb-6">
         <div className="relative w-full h-48 max-h-full rounded sm:h-auto">
           <img
@@ -38,16 +38,16 @@ export default function AuthorCard(props) {
             {props.bio}
           </p>
           <div className="flex items-center space-x-3">
-              <a id="github" hidden href={props.github}><AiFillGithub /></a>
-              <a id="youtube" hidden href={props.youtube}><AiFillYoutube /></a>
-              <a id="twitter" hidden href={props.twitter}><AiFillTwitterCircle /></a>
-              <a id="telephone" hidden href={props.phone}><AiFillPhone /></a>
-              <a id="whatsapp" hidden href={props.whatsapp}><AiOutlineWhatsApp /></a>
-              <a id="facebook" hidden href={props.facebook}><AiFillFacebook /></a>
-              <a id="instagram" hidden href={props.instagram}><AiFillInstagram /></a>
-              <a id="linkedin" hidden href={props.linkedin}><AiFillLinkedin /></a>
-              <a id="email" hidden href={props.email}><AiOutlineMail /></a>
-              <a id="website" hidden href={props.global}><AiOutlineGlobal /></a>
+              <a id="github" hidden href={props.github} target="_blank"><AiFillGithub /></a>
+              <a id="youtube" hidden href={props.youtube} target="_blank"><AiFillYoutube /></a>
+              <a id="twitter" hidden href={props.twitter} target="_blank"><AiFillTwitterCircle /></a>
+              <a id="telephone" hidden href={props.phone} target="_blank"><AiFillPhone /></a>
+              <a id="whatsapp" hidden href={props.whatsapp} target="_blank"><AiOutlineWhatsApp /></a>
+              <a id="facebook" hidden href={props.facebook} target="_blank"><AiFillFacebook /></a>
+              <a id="instagram" hidden href={props.instagram} target="_blank"><AiFillInstagram /></a>
+              <a id="linkedin" hidden href={props.linkedin} target="_blank"><AiFillLinkedin /></a>
+              <a id="email" hidden href={props.email} target="_blank"><AiOutlineMail /></a>
+              <a id="website" hidden href={props.global} target="_blank"><AiOutlineGlobal /></a>
             </div>
         </div>
       </div>
