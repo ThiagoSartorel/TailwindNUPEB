@@ -50,25 +50,6 @@ export default function Noticias(props) {
     }
   }
 
-  function getCategoria(id){
-    switch(id){
-      case 1:
-        return "Post"
-      
-      case 2:
-        return "Notícia"
-      
-      case 3:
-        return "Artigo"
-
-      case 4:
-        return "Evento"
-
-      case null:
-        return "Não cadastrado"
-    }
-  }
-
   function getFiltro() {
     if (typeof document != "undefined") {
       var valueSelect = document.getElementById("selectFiltro").value;
@@ -156,7 +137,6 @@ export default function Noticias(props) {
 export async function getServerSideProps(context) {
   var noticias = await axios.get(process.env.BACKEND+"news/");
   noticias = noticias.data.news;
-  console.log(noticias);
 
   var newCategories = await axios.get
     (process.env.BACKEND + "newCategories/");
