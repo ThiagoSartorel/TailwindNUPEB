@@ -80,7 +80,7 @@ export default function Noticias(props) {
             title={itemNew.title}
             content={itemNew.description}
             author={itemNew.author.name}
-            category={getCategoria(itemNew.new_category_id)}
+            category={itemNew.newCategory.category_name}
             date={itemNew.created_at}
             image={process.env.BACKEND + "showFile/" + itemNew.file_id}
           />
@@ -97,7 +97,7 @@ export default function Noticias(props) {
         title={itemNew.title}
         content={itemNew.description}
         author="AutorPost"
-        category={getCategoria(itemNew.new_category_id)}
+        category={itemNew.newCategory.category_name}
         date={itemNew.created_at}
         image={process.env.BACKEND + "showFile/" + itemNew.file_id}
       />
@@ -156,6 +156,7 @@ export default function Noticias(props) {
 export async function getServerSideProps(context) {
   var noticias = await axios.get(process.env.BACKEND+"news/");
   noticias = noticias.data.news;
+  console.log(noticias);
 
   var newCategories = await axios.get
     (process.env.BACKEND + "newCategories/");
