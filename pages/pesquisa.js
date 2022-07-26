@@ -7,7 +7,7 @@ export default function Home() {
         <div className="texto-basico">
           <h2 className="titulo-principal">Linhas de Pesquisa</h2>
         </div>
-        <div className="mb-6">
+        <div className="mb-6 ">
         <Gridpesquisa />
         </div>
     
