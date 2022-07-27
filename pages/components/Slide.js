@@ -8,6 +8,7 @@ let slideInterval;
 export default function Slider(props) {
 
   featuredProducts = props.imagens;
+  console.log(featuredProducts[0]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

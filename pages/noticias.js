@@ -50,25 +50,6 @@ export default function Noticias(props) {
     }
   }
 
-  function getCategoria(id){
-    switch(id){
-      case 1:
-        return "Post"
-      
-      case 2:
-        return "Notícia"
-      
-      case 3:
-        return "Artigo"
-
-      case 4:
-        return "Evento"
-
-      case null:
-        return "Não cadastrado"
-    }
-  }
-
   function getFiltro() {
     if (typeof document != "undefined") {
       var valueSelect = document.getElementById("selectFiltro").value;
@@ -80,7 +61,7 @@ export default function Noticias(props) {
             title={itemNew.title}
             content={itemNew.description}
             author={itemNew.author.name}
-            category={getCategoria(itemNew.new_category_id)}
+            category={itemNew.newCategory.category_name}
             date={itemNew.created_at}
             image={process.env.BACKEND + "showFile/" + itemNew.file_id}
           />
@@ -97,7 +78,7 @@ export default function Noticias(props) {
         title={itemNew.title}
         content={itemNew.description}
         author="AutorPost"
-        category={getCategoria(itemNew.new_category_id)}
+        category={itemNew.newCategory.category_name}
         date={itemNew.created_at}
         image={process.env.BACKEND + "showFile/" + itemNew.file_id}
       />
