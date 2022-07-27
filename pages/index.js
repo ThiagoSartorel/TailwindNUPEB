@@ -2,6 +2,7 @@ import GridNoticia from "./components/GridNoticia";
 import Slider from "./components/Slide";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
+import HtmlParser from "react-html-parser";
 
 const imagens = [];
 
@@ -39,21 +40,7 @@ export default function Home(props) {
             </a>
             <div className="w-full p-4 mx-0 lg:mx-4 xl:mx-24 overflow-hidden bg-card">
               <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
-                <p className="text-gray-600 text-base py-2">
-                  Pesquisar políticas para a Educação Básica e suas relações com
-                  os processos formativos na escola, levando em consideração os
-                  fundamentos teóricos envolvidos na elaboração, implementação,
-                  avaliação, resistências e redefinição das políticas
-                  educacionais.
-                </p>
-                <br></br>
-                <h3>Missão:</h3>
-
-                <br></br>
-                <h3>Visão:</h3>
-
-                <br></br>
-                <h3>Valores:</h3>
+                {HtmlParser(props.sobre[0].description_objetivosgerais)}
               </div>
             </div>
           </div>
@@ -66,17 +53,7 @@ export default function Home(props) {
             </a>
             <div className="w-full p-4 mx-0 lg:mx-4 xl:mx-24 overflow-hidden bg-card">
               <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
-                <p className="text-gray-600 text-base py-2">
-                  Objetivos gerais das linhas de pesquisas
-                </p>
-                <br></br>
-                <h3>Pedagogia da Infância, Políticas e Diferenças</h3>
-
-                <br></br>
-                <h3>Comunicação, Divulgação Científica e Inovação</h3>
-
-                <br></br>
-                <h3>Formação de professores e Cotidiano escolar</h3>
+                {HtmlParser(props.sobre[0].description_linhasdepesquisa)}
               </div>
             </div>
           </div>
@@ -117,6 +94,7 @@ export default function Home(props) {
 export async function getServerSideProps() {
   var banner = await axios.get(process.env.BACKEND + "banners2/listActive");
   var noticias = await axios.get(process.env.BACKEND + "news");
+  var sobre = await axios.get(process.env.BACKEND + "homepage");
 
-  return { props: { banner: banner.data, news: noticias.data.news } };
+  return { props: { banner: banner.data, news: noticias.data.news, sobre: sobre.data } };
 }
