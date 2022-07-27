@@ -53,7 +53,7 @@ export default function Home(props) {
             </a>
             <div className="w-full p-4 mx-0 lg:mx-4 xl:mx-24 overflow-hidden bg-card">
               <div className="text-gray-600 text-base py-2 overflow-auto touch-pan-y h-80 scroll text-justify">
-                {HtmlParser(props.sobre[0].description_linhasdepesquisa)}
+                {HtmlParser(props.sobre[0].description_linhasdepesquisa)} 
               </div>
             </div>
           </div>
