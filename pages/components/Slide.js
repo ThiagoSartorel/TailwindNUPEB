@@ -8,7 +8,7 @@ let slideInterval;
 export default function Slider(props) {
 
   featuredProducts = props.imagens;
-  console.log(featuredProducts[0]);
+  //console.log(featuredProducts[0]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -54,7 +54,7 @@ export default function Slider(props) {
   return (
     <div ref={slideRef} className="w-full select-none relative drop-shadow-xl ">
       <div className="aspect-w-16 aspect-h-9"> 
-        <img src={process.env.BACKEND + "images/" + featuredProducts[currentIndex]} alt={featuredProducts[currentIndex]} className="banner w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
+        <img src={process.env.BACKEND + "showFile/" + featuredProducts[currentIndex]} alt={featuredProducts[currentIndex]} className="banner w-full h-[15rem] sm:h-[30rem] lg:h-[40rem]"/>{/*  h-[35rem]*/}
       </div>
 
       <div className="absolute w-full top-1/2 transform -translate-y-1/2 px-3 flex justify-between items-center">
