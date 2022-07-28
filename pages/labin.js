@@ -6,7 +6,13 @@ import {
   ArrowNarrowUpIcon,
 } from "@heroicons/react/solid";
 
-export default function Home() {
+import HtmlParser  from "react-html-parser";
+import axios from "axios";
+
+
+export default function Home(props) {
+  console.log(props.content.labins[0])
+  const labins = props.content.labins[0];
   return (
     <>
       <div
@@ -36,47 +42,7 @@ export default function Home() {
                   Resumo
                 </h2>
               </div>
-              <p className="text-justify p-4">
-                Pesquisar a questão da inovação na educação relacionada à
-                produção de conteúdos e à divulgação científica, promovendo a
-                investigação e a realização de práticas baseadas nos dados
-                pesquisados. Busca fortalecer a articulação do grupo de pesquisa
-                NuPEB com a Educação Básica. Nesse sentido, compreende-se que é
-                fundamental pesquisar e aplicar os conhecimentos presentes na
-                literatura científica no desenvolvimento de conteúdos
-                educacionais inovadores, bem como na criação de estratégias
-                eficazes de divulgação das pesquisas realizadas pelo Grupo de
-                Pesquisa NuPEB, em parceria com outros pesquisadores da
-                Instituição. As pesquisas realizadas no Laboratório tem a
-                finalidade de consolidar o NuPEB no âmbito do ecossistema de
-                CTI, potencializando a interdisciplinaridade e a integração
-                entre ensino, pesquisa e extensão, voltadas ao enfrentamento dos
-                problemas existentes na Educação Básica. Para isso, o
-                Laboratório irá desenvolver investigação científica sobre a
-                produção de conteúdos educacionais inovadores. O processo de
-                aperfeiçoamento técnico-científico do Podcast Eureka! servirá
-                como fundamentação para a elaboração de materiais didáticos que
-                estimulem e possibilitem o uso deste recurso nos diferentes
-                níveis de educação. Além disso, o Laboratório aplicará os
-                conhecimentos produzidos na produção de conteúdos sobre questões
-                de educação ambiental e de relações étnico-raciais pesquisadas
-                pelo Núcleo de Educação Ambiental e pelo Núcleo de Estudos
-                Afro-Brasileiros da Universidade. Serão organizados dois livros
-                em formato digital e impresso, uma coletânea contendo resultados
-                desta pesquisa e de outras produzidas pelo NuPEB e por outros
-                pesquisadores e um livro direcionado à Educação Básica, contendo
-                verbetes didáticos, produzidos por pesquisadores da Instituição,
-                das diferentes áreas do conhecimento. Dentre os impactos gerados
-                pelo Laboratório está a possibilidade de compreender,
-                sistematizar e aplicar os conhecimentos, de modo a se utilizar a
-                linguagem e as estratégias adequadas para inovar e divulgar a
-                pesquisa científica em educação. Espera-se, como este projeto,
-                contribuir para a construção de projetos em parceria entre os
-                pesquisadores, os professores da Educação Básica, os egressos do
-                Mestrado, a comunidade acadêmica, a população e o setor
-                produtivo, por meio da divulgação das atividades de pesquisa, de
-                ensino e extensão do NuPEB e da Universidade.
-              </p>
+              {HtmlParser(labins.description_resume)}
             </div>
             <div className="text-start p-1 sm:p-2 md:p-4  ">
               <div className="flex flex-row shadow-sm">
@@ -87,29 +53,7 @@ export default function Home() {
                   Finalidade
                 </h2>
               </div>
-
-              <p className="text-justify p-4">
-                <ul>
-                  1- Pesquisar a questão da inovação relacionada à produção de
-                  conteúdos e à divulgação científica, promovendo a investigação
-                  e a realização de práticas baseadas nos dados pesquisados.
-                </ul>
-                <ul>
-                  2- O Labin busca potencializar as atividades de pesquisa
-                  realizadas no Grupo de Pesquisa NuPEB e sua articulação com a
-                  comunidade científica por meio da pesquisa sobre inovação e
-                  divulgação científica.
-                </ul>
-                <ul>
-                  3- As atividades de pesquisa do projeto visam estimular
-                  parcerias entre os pesquisadores que atuam na área
-                  educacional, buscando investigar e aplicar os conhecimentos na
-                  produção de conteúdos inovadores relacionados à divulgação
-                  científica, ampliando a pertinência social e a aplicação dos
-                  resultados das pesquisas do NuPEB na realidade local, regional
-                  e nacional, articulando a pesquisa, o ensino e a extensão.
-                </ul>
-              </p>
+              {HtmlParser(labins.description_finalidade)}
             </div>
 
             <div className="text-start p-1 sm:p-2 md:p-4  ">
@@ -121,37 +65,7 @@ export default function Home() {
                   Objetivos
                 </h2>
               </div>
-              <p className="text-justify p-4">
-                <h3 className="font-medium pb-2">Geral: </h3>
-                <ul>
-                  Analisar as contribuições da pesquisa científica e das
-                  práticas de inovação e divulgação científica realizadas no
-                  Laboratório de Produção de Conteúdo e Inovação Educacional
-                  (Labin) para a melhoria da qualidade da educação.
-                </ul>
-
-                <h2 className="font-medium pb-2 pt-2">Específicos:</h2>
-                <ul>
-                  1- Pesquisar a questão da inovação relacionada à produção de
-                  conteúdos e à divulgação científica, promovendo a investigação
-                  e a realização de práticas baseadas nos dados pesquisados.
-                </ul>
-                <ul>
-                  2- O Labin busca potencializar as atividades de pesquisa
-                  realizadas no Grupo de Pesquisa NuPEB e sua articulação com a
-                  comunidade científica por meio da pesquisa sobre inovação e
-                  divulgação científica.
-                </ul>
-                <ul>
-                  3- As atividades de pesquisa do projeto visam estimular
-                  parcerias entre os pesquisadores que atuam na área
-                  educacional, buscando investigar e aplicar os conhecimentos na
-                  produção de conteúdos inovadores relacionados à divulgação
-                  científica, ampliando a pertinência social e a aplicação dos
-                  resultados das pesquisas do NuPEB na realidade local, regional
-                  e nacional, articulando a pesquisa, o ensino e a extensão.
-                </ul>
-              </p>
+              {HtmlParser(labins.description_objetivo)}
             </div>
 
             <div className="text-start p-1 sm:p-2 md:p-4  ">
@@ -163,14 +77,17 @@ export default function Home() {
                   Coordenação
                 </h2>
               </div>
-              <p className="text-justify p-4">
-                <ul>Prof. Dr. Jaime Farias Dresch</ul>
-                <ul>Email: labin@uniplaclages.edu.br</ul>
-              </p>
+              {HtmlParser(labins.description_coord)}
             </div>
           </div>
         </div>
       </div>
     </>
   );
+}
+
+export async function getServerSideProps(){
+  const response = await axios.get(process.env.BACKEND + "labin");
+  
+  return {props: {content: response.data}};
 }
