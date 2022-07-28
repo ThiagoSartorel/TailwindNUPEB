@@ -49,7 +49,7 @@ export default function Calendario(props) {
               </div>
             </div>
             <hr className="mb-4"></hr>
-            <div className="container mx-auto grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
+            <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
               {getEventos()}
             </div>
           </div>
