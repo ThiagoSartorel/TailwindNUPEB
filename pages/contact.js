@@ -134,7 +134,7 @@ const Contact = () => {
           {/* right */}
           <div className="w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4 bg-card">
             <div className="p-4">
-            <p className="uppercase pt-4 pb-2">CONTATO</p>
+            <p className="uppercase pt-4 pb-2">PUBLICAÇÕES</p>
               <form
                 onSubmit={handleSubmit}
                 action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
