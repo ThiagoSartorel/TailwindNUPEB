@@ -1,6 +1,5 @@
-import List from "./components/List";
 import ListItem from "./components/ListItem";
-import { FaSearch, FaFilter } from "react-icons/fa";
+import { FaFilter } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import React, { useState } from "react";
@@ -34,7 +33,7 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12 mb-10 sm:mb-6 lg:mb-0">
+      <div className="sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12 mb-16">
         <div className="textoBasico">
           <h2 className="titulo-principal">Indicações</h2>
         </div>
