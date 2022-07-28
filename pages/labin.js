@@ -34,7 +34,7 @@ export default function Home(props) {
             </h1>
 
             <div className="text-start p-1 sm:p-2 md:p-4  ">
-              <div className="flex flex-row shadow-sm">
+              <div className="flex flex-row shadow-sm mb-3">
                 <svg className="icon w-16">
                   <ShareIcon />
                 </svg>
@@ -45,7 +45,7 @@ export default function Home(props) {
               {HtmlParser(labins.description_resume)}
             </div>
             <div className="text-start p-1 sm:p-2 md:p-4  ">
-              <div className="flex flex-row shadow-sm">
+              <div className="flex flex-row shadow-sm mb-3">
                 <svg className="icon w-16">
                   <SpeakerphoneIcon />
                 </svg>
@@ -57,7 +57,7 @@ export default function Home(props) {
             </div>
 
             <div className="text-start p-1 sm:p-2 md:p-4  ">
-              <div className="flex flex-row shadow-sm">
+              <div className="flex flex-row shadow-sm mb-3">
                 <svg className="icon w-16">
                   <CheckCircleIcon />
                 </svg>
@@ -69,7 +69,7 @@ export default function Home(props) {
             </div>
 
             <div className="text-start p-1 sm:p-2 md:p-4  ">
-              <div className="flex flex-row shadow-sm">
+              <div className="flex flex-row shadow-sm mb-3">
                 <svg className="icon w-16">
                   <AtSymbolIcon />
                 </svg>
