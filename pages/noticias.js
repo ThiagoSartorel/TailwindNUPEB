@@ -101,7 +101,7 @@ export default function Noticias(props) {
       </div>
       <div>
         <form className="flex flex-initial px-5">
-          <div className="container mx-auto flex flex-row-reverse mb-8 gap-4 px-0 sm:px-4  items-center">
+          <div className="container mx-auto flex flex-row-reverse mb-2 gap-4 px-0 sm:px-4  items-center">
             <FaFilter className="my-2 mx-1" />
 
             <select
@@ -120,8 +120,8 @@ export default function Noticias(props) {
                 );
               })}
             </select>
-            <a href="lista_autores" className="w-full text-start cursor-pointer hover:text-lg h-4">
-              Autores
+            <a href="lista_autores" className="btn-submit w-ful md:w-48">
+              Lista de autores
             </a>
           </div>
         </form>

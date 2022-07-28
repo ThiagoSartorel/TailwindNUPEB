@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full min-h-screen mb-6">
+    <div id="contact" className="w-full min-h-screen mb-10">
       <div className="mb-16 pt-12 lg:mx-5 md:mx-5 sm:mx-5">
         <p className="titulo-principal">Contato</p>
 
@@ -134,17 +134,19 @@ const Contact = () => {
           {/* right */}
           <div className="w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4 bg-card">
             <div className="p-4">
+            <p className="uppercase pt-4 pb-2">CONTATO</p>
               <form
                 onSubmit={handleSubmit}
                 action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
                 method="POST"
               >
-                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                <div className="grid md:grid-cols-2 gap-4 w-full">
                   <div className="flex flex-col">
-                    <label className="uppercase text-sm py-2">Nome</label>
+                    <label className="uppercase text-sm py-2" >Nome</label>
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      placeholder="Seu nome"
                       name="name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -155,6 +157,7 @@ const Contact = () => {
                     <input
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      placeholder="(00) 0000-0000"
                       name="phone"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
@@ -166,6 +169,7 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
+                    placeholder="Exemplo@gmail.com"
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -176,6 +180,7 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
+                    placeholder="Sua ideia ou título para post"
                     name="subject"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
@@ -186,6 +191,7 @@ const Contact = () => {
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
+                    placeholder="O Blog do NuPEB tem como objetivo divulgar discussões, ensaios e artigos comprometidos com a problematização do mundo contemporâneo."
                     name="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

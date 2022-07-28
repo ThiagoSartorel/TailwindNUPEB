@@ -12,8 +12,14 @@ export default function Perfil(props) {
         {props.authors.map((author) => (
             <AuthorCard id={author.id} name={author.name} image={author.photo_id} bio={author.bio.length > 80 ? HtmlParser(author.bio.substr(0, 80) + "...") : HtmlParser(author.bio.substr(0, 80))} whatsapp="" facebook="" twitter="" email="" instagram="" github="" youtube="" telephone="" linkedin="" website="" />
         ))}
+        
       </div>
+      <div className="btn-submit w-full md:w-72 mx-auto">
+      <a href="/contact" >Quero participar do blog do NuPEB</a>
+      </div>
+      
     </div>
+    
   );
 }
 
