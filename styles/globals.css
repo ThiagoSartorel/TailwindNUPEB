@@ -41,7 +41,7 @@ input, textarea {
 }
 
 .titulo-principal{
-  @apply text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] py-8
+  @apply text-[3rem] text-center font-bold text-3xl tracking-widest uppercase text-[#f7a439] pt-8 pb-3
 }
 
 .btn-submit{

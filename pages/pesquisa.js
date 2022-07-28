@@ -5,7 +5,7 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="mx-4 sm:mx-20 md:mx-30 lg:mx-36 xl:mx-48 min-h-screen mb-12 pt-12">
+      <div className="mx-4 sm:mx-20 md:mx-30 lg:mx-36 xl:mx-48 min-h-screen mb-14 pt-12">
         <div className="texto-basico">
           <h2 className="titulo-principal">Pesquisas</h2>
         </div>

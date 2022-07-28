@@ -39,7 +39,7 @@ export default function Calendario(props) {
     <div id="contact" className="">
       <div className="mb-20 pt-12 mx-4 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-28 min-h-screen">
         <p className="titulo-principal">Agenda</p>
-        <div className="shadow-md">
+        <div className="shadow-md pt-2">
           <div className=" bg-card py-4 sm:p-4 xl:px-20 rounded-md">
             <div className="flex flex-col sm:justify-between sm:flex-row">
               <div>
