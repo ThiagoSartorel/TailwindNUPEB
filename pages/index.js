@@ -14,7 +14,7 @@ export default function Home(props) {
   return (
     <>
       <div className="pt-10">
-        <Slider imagens={imagens} />
+        <Slider key={imagens} imagens={imagens} />
       </div>
 
       <div className="text-center p-6 bg-slate-500 bg-opacity-10">
@@ -75,6 +75,7 @@ export default function Home(props) {
             }
             return (
               <GridNoticia
+                key={oneNew.id}
                 id_author={oneNew.author_id}
                 id={oneNew.id}
                 title={oneNew.title}

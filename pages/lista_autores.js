@@ -25,7 +25,6 @@ export default function Perfil(props) {
 
 export async function getServerSideProps() {
   const retorno = await axios.get(process.env.BACKEND + "authors/all");
-  //console.log(retorno)
 
   return { props: { authors: retorno.data } };
 }

@@ -11,7 +11,6 @@ import axios from "axios";
 
 
 export default function Home(props) {
-  console.log(props.content.labins[0])
   const labins = props.content.labins[0];
   return (
     <>

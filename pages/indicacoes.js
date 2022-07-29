@@ -22,7 +22,7 @@ export default function Home(props) {
       var indi = props.indications
 
       var valueSelect = document.getElementById("select").value
-      console.log(filtro)
+
       if (valueSelect != "0") {
         indi = indi.filter(indi => indi.recommendation_category_id == filtro)
       }

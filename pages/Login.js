@@ -8,20 +8,16 @@ import nookies from 'nookies'
 
 
 async function auth(data) {
-  console.log(data)
   try {
     const retorno = await axios.post(process.env.BACKEND + 'login', {
       "email": data.email,
       "password": data.password
     })
-    console.log(retorno)
-    console.log("usuario logado com sucesso")
     nookies.set(null, 'nupeb-auth', retorno.data.token, {
       maxAge: 60 * 60 * 1,
       path: '/'
     });
     Router.push("http://localhost:3001")
-    console.log(retorno)
   }
   catch (e) {
     document.getElementById("error").hidden = false;
