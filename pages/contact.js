@@ -52,9 +52,9 @@ const Contact = () => {
                 <iframe
                   className="w-full h-60 lg:w-full lg:h-80"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3528.544008698326!2d-50.316700999999995!3d-27.823803499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e01f22ad622ac3%3A0x14a90d6184a4173a!2sAv.%20Mal.%20Castelo%20Branco%2C%20170%20-%20Universit%C3%A1rio%2C%20Lages%20-%20SC%2C%2088509-900!5e0!3m2!1sen!2sbr!4v1656695711040!5m2!1sen!2sbr"
-                  allowfullscreen=""
+                  allowFullScreen=""
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
               <div>

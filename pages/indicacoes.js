@@ -26,7 +26,7 @@ export default function Home(props) {
         indi = indi.filter(indi => indi.recommendation_category_id == filtro)
       }
       return indi.map((ind) => (
-        <ListItem image={ind.file_id} title={ind.title} description={ind.description} annuance={ind.announcement} category={ind.recommendationCategory.name} genre={ind.genre}/>
+        <ListItem key={ind.id} image={ind.file_id} title={ind.title} description={ind.description} annuance={ind.announcement} category={ind.recommendationCategory.name} genre={ind.genre}/>
       ));
     }
   }
@@ -37,13 +37,10 @@ export default function Home(props) {
         <div className="textoBasico">
           <h2 className="titulo-principal">Indicações</h2>
         </div>
-
-
-        
         <div className="container mx-auto flex flex-row mb-8 ml-6">
           <FaFilter className="my-2 mr-4" />
           <select className="rounded-lg px-2 py-1 bg-slate-100" onChange={(e) => reload()} id="select">
-            <option selected value="0">Todos</option>
+            <option defaultValue value="0">Todos</option>
             <option value="1">Filmes</option>
             <option value="2">Livros</option>
             <option value="3">Materiais didáticos</option>
@@ -51,7 +48,7 @@ export default function Home(props) {
         </div>
 
         <div className="divide-y divide-slate-100">
-          {getRecommendation()}
+          <article>{getRecommendation()}</article>
         </div>
       </div>
     </>
