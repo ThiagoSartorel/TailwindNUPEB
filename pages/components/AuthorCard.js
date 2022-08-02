@@ -23,9 +23,9 @@ export default function AuthorCard(props) {
     <a>
       <div className="grid grid-cols-1 sm:grid-cols-3 border-b-white border-2 pb-8 md:pb-6">
         <div className="relative w-full h-48 max-h-full rounded sm:h-auto">
-          <a href={"profiles/" + props.id}>
+          <a href={props.id}>
             <img
-              className="absolute object-cover w-40 h-40 mx-auto sm:right-4 rounded-full shadow-lg"
+              className="absolute object-cover w-40 h-40 mx-auto sm:right-4 rounded-full shadow-lg hover:scale-110 duration-300 hover:opacity-90"
               src={process.env.FILESRV + props.image}
               alt="Avatar"
             />

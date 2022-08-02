@@ -8,7 +8,7 @@ const imagens = [];
 
 export default function Home(props) {
   for (let i = 0; i < props.banner.length; i++) {
-    imagens.push(props.banner[i].id);
+    imagens.push(props.banner[i].url);
   }
   var contador = 0;
   return (
