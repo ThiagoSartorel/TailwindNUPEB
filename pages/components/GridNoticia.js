@@ -5,9 +5,9 @@ export default function GridNoticia(props) {
   });
   return (
     
-    <div className="bg-card rounded-lg shadow-md overflow-hidden p-2">
-      <div className="w-full p-2">
-        <h4 className="font-semibold text-lg">{props.title}</h4>
+    <div className="bg-card rounded-lg shadow-md overflow-hidden p-1">
+      <div className="w-full p-2 hover:duration-300 hover:scale-95">
+        <h4 className="font-semibold text-lg ">{props.title}</h4>
         <a href={"profiles/" + props.id_author} className="font-normal">
           {props.author}
         </a>
@@ -24,7 +24,7 @@ export default function GridNoticia(props) {
       <div className="w-full p-2 pb-3">
         <a
           href={"/post/" + props.id}
-          className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 absolute"
+          className="bg-green-500 p-1 px-2 rounded-md text-white hover:bg-green-600 hover:duration-300 hover:scale-95 absolute"
         >
           Saiba mais
         </a>

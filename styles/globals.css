@@ -60,7 +60,7 @@ input, textarea {
 }
 
 .bg-card{
-  @apply bg-sky-800 bg-opacity-10 hover:bg-slate-300 hover:bg-opacity-60 rounded-md shadow-md
+  @apply bg-sky-800 bg-opacity-10 hover:bg-slate-300 hover:bg-opacity-60 rounded-md shadow-md hover:duration-500
 }
 
 .scroll::-webkit-scrollbar {
