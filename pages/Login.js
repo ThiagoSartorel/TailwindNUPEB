@@ -34,12 +34,12 @@ export default function Login() {
           <form onSubmit={handleSubmit(auth)}>
             <div>
               <label htmlFor="Login" className="text-sm text-gray-700 mb-1">Login</label>
-              <input type="text" id="Login" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md" {...register("email")}></input>
+              <input type="text" id="Login" autoComplete="username" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md" {...register("email")}></input>
             </div>
 
             <div>
               <label htmlFor="Senha" className="text-sm text-gray-700 mb-1">Senha</label>
-              <input type="password" id="Senha" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md" {...register("password")}></input>
+              <input type="password" autoComplete="current-password" id="Senha" className="px-2 w-full border hover:bg-gray-100 border-gray-400 rounded-md" {...register("password")}></input>
 
             </div>
             <div className="bg-red-300 mt-2 w-full rounded-md" id="error" hidden>
