@@ -2,7 +2,7 @@ import ListItem from "./components/ListItem";
 import { FaFilter } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Home(props) {
   const { register, handleSubmit } = useForm();
@@ -14,21 +14,23 @@ export default function Home(props) {
       setFiltro(value);
     }
   }
-
-
+  
   function getRecommendation() {
-    if (typeof document != "undefined") {
+    useEffect(() => {
+      if (typeof document != "undefined") {
+        var valueSelect = document.getElementById("select").value;
+        setFiltro(valueSelect);
+      }
+    });
       var indi = props.indications
 
-      var valueSelect = document.getElementById("select").value
-
-      if (valueSelect != "0") {
+      if (filtro != "0") {
         indi = indi.filter(indi => indi.recommendation_category_id == filtro)
       }
       return indi.map((ind) => (
         <ListItem key={ind.id} image={ind.file_id} title={ind.title} description={ind.description} annuance={ind.announcement} category={ind.recommendationCategory.name} genre={ind.genre}/>
       ));
-    }
+    
   }
 
   return (
