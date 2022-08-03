@@ -18,23 +18,21 @@ export default function AuthorProfile(props) {
     const [whatsapp, setWhatsapp] = useState("");
 
     function getPost() {
-        if (typeof document != "undefined") {
-            var posts = props.posts.news
-            posts = posts.filter(post => post.author_id == props.author.id)
-            return posts.map((evento) => (
-                <div key={evento.id}>
-                    <GridNoticia
-                        id={evento.id}
-                        title={evento.title}
-                        id_author={evento.author_id}
-                        author={evento.author.name}
-                        description={evento.description}
-                        image={evento.file_id}
-                        date={evento.created_at}
-                    />
-                </div>
-            ));
-        }
+        var posts = props.posts.news
+        posts = posts.filter(post => post.author_id == props.author.id)
+        return posts.map((evento) => (
+            <div key={evento.id}>
+                <GridNoticia
+                    id={evento.id}
+                    title={evento.title}
+                    id_author={evento.author_id}
+                    author={evento.author.name}
+                    description={evento.description}
+                    image={evento.file_id}
+                    date={evento.created_at}
+                />
+            </div>
+        ));
     }
 
     useEffect(() => {
