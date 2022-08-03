@@ -12,7 +12,7 @@ export default function Perfil(props) {
 
         {props.authors.map((author) => (
           <div key={author.id}>
-            <AuthorCard id={"profiles/" + author.id} name={author.name} image={author.photo_id} bio={author.bio.length > 80 ? HtmlParser(author.bio.substr(0, 80) + "...") : HtmlParser(author.bio.substr(0, 80))} whatsapp="" facebook="" twitter="" email="" instagram="" github="" youtube="" telephone="" linkedin="" website="" />
+            <AuthorCard info={"Conheça " + author.name + "!"} id={"profiles/" + author.id} name={author.name} image={author.photo_id} bio={author.bio.length > 80 ? HtmlParser(author.bio.substr(0, 80) + "...") : HtmlParser(author.bio.substr(0, 80))} whatsapp="" facebook="" twitter="" email="" instagram="" github="" youtube="" telephone="" linkedin="" website="" />
           </div>
         ))}
       

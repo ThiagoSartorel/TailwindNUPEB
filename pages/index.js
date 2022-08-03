@@ -34,7 +34,7 @@ export default function Home(props) {
 
      
           <div className="w-full py-1 flex items-center">
-            <a className="mr-3 w-32 md:w-20 lg:w-16 xl:w-2 text-lg text-gray-700 font-bold hover:text-xl" href="informese">
+            <a className="mr-3 w-32 md:w-20 lg:w-16 xl:w-2 text-lg text-gray-700 font-bold hover:duration-300 hover:scale-110" href="informese">
               Objetivos Gerais
               <FaSearch className="mt-3"/>
             </a>
@@ -47,7 +47,7 @@ export default function Home(props) {
       
        
           <div className="w-full py-3 flex items-center">
-            <a className="mr-3 w-32 md:w-24 lg:w-16 xl:w-2  text-lg text-gray-700 font-bold hover:text-xl" href="pesquisa">
+            <a className="mr-3 w-32 md:w-24 lg:w-16 xl:w-2  text-lg text-gray-700 font-bold hover:duration-300 hover:scale-110" href="pesquisa">
               Linhas de Pesquisa
               <FaSearch className="mt-3"/>
             </a>

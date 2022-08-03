@@ -48,7 +48,7 @@ export default function AuthorCard(props) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-3 border-b-white border-2 pb-0 sm:pb-10 md:pb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-3 border-b-white border-2 pb-2 sm:pb-10 md:pb-12">
         <div className="relative w-full h-48 max-h-full rounded sm:h-auto group">
           <a href={props.id}>
             <img
@@ -57,7 +57,7 @@ export default function AuthorCard(props) {
               alt="Avatar"
             />
             <div className="opacity-0 group-hover:opacity-100 hover:scale-110 duration-300 w-24 relative inset-8 z-10 justify-center items-center text-center text-6x1 text-slate-700 font-semibold">
-              Conheça {props.name}! 
+              {props.info} 
             </div>
           </a>
         </div>

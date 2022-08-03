@@ -79,14 +79,14 @@ export default function AuthorProfile(props) {
 
 
     return (
-        <div className="mx-10 sm:mx-20 md:mx-30 lg:mx-48 min-h-screen pt-12 mb-16">
+        <div className="mx-4 sm:mx-8 md:mx-30 xl:mx-48 min-h-screen pt-12 mb-16">
             <div className="textoBasico">
                 <h2 className="titulo-principal">Perfil do Autor</h2>
             </div>
             <AuthorCard id={process.env.BACKEND + "showFile/" + props.author.photo_id} name={props.author.name} image={props.author.photo_id} bio={HtmlParser(props.author.bio)} github={github} facebook={facebook} email={email} youtube={youtube} twitter={twitter} linkedin={linkedin} instagram={instagram} website={website} whatsapp={whatsapp} telephone={telephone} />
 
             <hr className="mb-4"></hr>
-            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
+            <div className=" grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 px-4 gap-4">
                 {getPost()}
             </div>
 
