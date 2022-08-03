@@ -40,7 +40,6 @@ export default function ListItem(props) {
               {props.genre}
             </dd>
           </div>
-          <div></div>
           <div className="flex-none w-full mt-2 font-normal">
             <dt className="sr-only">{"Descrição"}</dt>
             <dd className="text-slate-400">{props.description}</dd>
