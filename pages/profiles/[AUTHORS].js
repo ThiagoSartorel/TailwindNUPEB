@@ -17,10 +17,8 @@ export default function AuthorProfile(props) {
     const [email, setEmail] = useState("");
     const [whatsapp, setWhatsapp] = useState("");
 
-
     function getPost() {
         if (typeof document != "undefined") {
-            console.log(props)
             var posts = props.posts.news
             posts = posts.filter(post => post.author_id == props.author.id)
             return posts.map((evento) => (
@@ -86,12 +84,12 @@ export default function AuthorProfile(props) {
                 <h2 className="titulo-principal">Perfil do Autor</h2>
             </div>
             <AuthorCard id={process.env.BACKEND + "showFile/" + props.author.photo_id} name={props.author.name} image={props.author.photo_id} bio={HtmlParser(props.author.bio)} github={github} facebook={facebook} email={email} youtube={youtube} twitter={twitter} linkedin={linkedin} instagram={instagram} website={website} whatsapp={whatsapp} telephone={telephone} />
-          
-              <hr className="mb-4"></hr>
-              <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
+
+            <hr className="mb-4"></hr>
+            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
                 {getPost()}
-              </div>
-          
+            </div>
+
         </div>
     );
 }
