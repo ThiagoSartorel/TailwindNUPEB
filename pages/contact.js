@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="w-full min-h-screen mb-10">
+    <div id="contact" className="w-full min-h-screen mb-auto">
       <div className="mb-16 pt-12 lg:mx-5 md:mx-5 sm:mx-5">
         <p className="titulo-principal">Contato</p>
 
@@ -134,11 +134,9 @@ const Contact = () => {
           {/* right */}
           <div className="w-full h-auto shadow-md shadow-gray-400 rounded-xl lg:p-4 bg-card">
             <div className="p-4">
-            <p className="uppercase pt-4 pb-2">PUBLICAÇÕES</p>
               <form
                 onSubmit={handleSubmit}
-                action="https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060"
-                method="POST"
+                action="https://formsubmit.co/your@email.com" method="POST"
               >
                 <div className="grid md:grid-cols-2 gap-4 w-full">
                   <div className="flex flex-col">
@@ -190,7 +188,7 @@ const Contact = () => {
                   <label className="uppercase text-sm py-2">Mensagem</label>
                   <textarea
                     className="border-2 rounded-lg p-3 border-gray-300"
-                    rows="10"
+                    rows="8"
                     placeholder="O Blog do NuPEB tem como objetivo divulgar discussões, ensaios e artigos comprometidos com a problematização do mundo contemporâneo."
                     name="message"
                     value={message}
