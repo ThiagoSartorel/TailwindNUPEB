@@ -1,6 +1,6 @@
 import { FaFilter } from "react-icons/fa";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Post(props) {
   var conteudo = props.content;
@@ -51,26 +51,29 @@ export default function Noticias(props) {
   }
 
   function getFiltro() {
-    if (typeof document != "undefined") {
-      var valueSelect = document.getElementById("selectFiltro").value;
-      if (valueSelect == 0) {
-        //console.log(props.noticias)
-        return props.noticias.map((itemNew) => (  
-          <Post
-            key={itemNew.id}
-            id={itemNew.id}
-            title={itemNew.title}
-            content={itemNew.description}
-            author={itemNew.author.name}
-            category={itemNew.newCategory.category_name}
-            date={itemNew.created_at}
-            image={process.env.BACKEND + "showFile/" + itemNew.file_id}
-          />
-        ));
+    useEffect(() => {
+      if (typeof document != "undefined") {
+        var valueSelect = document.getElementById("selectFiltro").value;
+        setFiltro(valueSelect);
       }
+    });
+    
+    if (filtro == 0) {
+      return props.noticias.map((itemNew) => (
+        <Post
+          key={itemNew.id}
+          id={itemNew.id}
+          title={itemNew.title}
+          content={itemNew.description}
+          author={itemNew.author.name}
+          category={itemNew.newCategory.category_name}
+          date={itemNew.created_at}
+          image={process.env.BACKEND + "showFile/" + itemNew.file_id}
+        />
+      ));
     }
 
-    var noticias = props.noticias.filter(oneNew => oneNew.new_category_id == valueSelect);
+    var noticias = props.noticias.filter(oneNew => oneNew.new_category_id == filtro);
 
     return noticias.map((itemNew) => (
 
@@ -137,7 +140,7 @@ export default function Noticias(props) {
 }
 
 export async function getServerSideProps(context) {
-  var noticias = await axios.get(process.env.BACKEND+"news/");
+  var noticias = await axios.get(process.env.BACKEND + "news/");
   noticias = noticias.data.news;
 
   var newCategories = await axios.get
