@@ -4,6 +4,7 @@ export default function GridNoticia(props) {
     timeZone: "UTC",
   });
   return (
+    
     <div className="bg-card rounded-lg shadow-md overflow-hidden p-2">
       <div className="w-full p-2">
         <h4 className="font-semibold text-lg">{props.title}</h4>

@@ -1,12 +1,14 @@
 import axios from 'axios'
 import HtmlParser from 'react-html-parser';
+import { useEffect } from 'react'
 
 export default function Home(props) {
   const img = "background-image: url(" + process.env.BACKEND + "showFile/" + props.id.news[0].file_id + ")"
-  if (typeof document != 'undefined') {
-    document.getElementById("imagem").style = img;
-  }
-  console.log()
+  useEffect(() => {
+    if (typeof document != 'undefined') {
+      document.getElementById("imagem").style = img;
+    }
+  })
 
   return (
     <>
@@ -22,8 +24,8 @@ export default function Home(props) {
           </div>
         </div>
         <div id="imagem" className="lg:w-full lg:h-[650px] imagem-principal" />
-        <p className="text-md text-gray-500">{HtmlParser(props.id.news[0].description)}</p>
-        <p>{HtmlParser(props.id.news[0].content)}</p>
+        <d className="text-md text-gray-500">{HtmlParser(props.id.news[0].description)}</d>
+        <div>{HtmlParser(props.id.news[0].content)}</div>
       </div>
     </>
   );

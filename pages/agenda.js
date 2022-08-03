@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import GridNoticia from "./components/GridNoticia";
 
 export default function Calendario(props) {
