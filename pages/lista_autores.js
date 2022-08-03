@@ -4,7 +4,7 @@ import HtmlParser from 'react-html-parser';
 
 export default function Perfil(props) {
   return (
-    <div className="mx-6 min-h-screen pt-12 mb-20 lg:mb-0">
+    <div className="mx-6 min-h-screen pt-12 mb-20 lg:mb-0 ">
       <div className="textoBasico">
         <h2 className="titulo-principal">Lista de Autores</h2>
       </div>
