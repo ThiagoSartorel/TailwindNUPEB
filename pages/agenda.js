@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import GridNoticia from "./components/GridNoticia";
 
@@ -14,12 +14,18 @@ export default function Calendario(props) {
   }
 
   function getEventos() {
-    if (typeof document != "undefined") {
-      var eventos = props.eventos
-      eventos = eventos.filter(evento => evento.new_category_id == 1);
-      var value = document.getElementById("selectFiltro").value;
-      if (value != "") {
-        eventos = eventos.filter(evento => evento.created_at.substr(0, 7) == value);
+    var eventos = props.eventos
+    eventos = eventos.filter(evento => evento.new_category_id == 1);
+
+    useEffect(() => {
+      if (typeof document != "undefined") {
+        var value = document.getElementById("selectFiltro").value;
+        setFiltro(value);
+      }
+    })
+
+      if (filtro != "") {
+        eventos = eventos.filter(evento => evento.created_at.substr(0, 7) == filtro);
       }
       return eventos.map((evento) => (
         <div key={evento.id}>
@@ -34,7 +40,6 @@ export default function Calendario(props) {
           />
         </div>
       ));
-    }
   }
 
   return (
@@ -65,6 +70,6 @@ export default function Calendario(props) {
 
 
 export async function getServerSideProps() {
-  var eventos = await axios.get(process.env.BACKEND + "news");
-  return { props: { eventos: eventos.data.news } };
+  var ReturnEventos = await axios.get(process.env.BACKEND + "news");
+  return { props: { eventos: ReturnEventos.data.news } };
 }
