@@ -15,8 +15,7 @@ const Navbar = () => {
     <div className="nav-style fixed h-14 w-full flex flex-nowrap items-center p-7 mb-[2px] z-10 text-lg">
       {/* Left Side */}
       <div className="flex grow items-center justify-start">
-        <Link href="/">
-          <a className="flex">
+        <Link href="/" className="flex">
             <Image
               src={Logo}
               alt="/"
@@ -24,7 +23,6 @@ const Navbar = () => {
               height="36"
               className="cursor-pointer z-10"
             />
-          </a>
         </Link>
       </div>
 
@@ -33,28 +31,28 @@ const Navbar = () => {
         <div className="flex items-center">
           <ul className="w-full flex space-x-4">
             <li>
-              <a href="/">Home</a>
+               <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/informese">Informe-se</a>
+               <Link href="/informese">Informe-se</Link>
             </li>
             <li>
-              <a href="/pesquisa">Pesquisa</a>
+               <Link href="/pesquisa">Pesquisa</Link>
             </li>
             <li>
-              <a href="/agenda">Agenda</a>
+               <Link href="/agenda">Agenda</Link>
             </li>
             <li>
-              <a href="/noticias">Blog</a>
+               <Link href="/noticias">Blog</Link>
             </li>
             <li>
-              <a href="/indicacoes">Indicações</a>
+               <Link href="/indicacoes">Indicações</Link>
             </li>
             <li>
-              <a href="/labin">LABIN</a>
+               <Link href="/labin">LABIN</Link>
             </li>
             <li>
-              <a href="/contact">Contato</a>
+               <Link href="/contact">Contato</Link>
             </li>
           </ul>
         </div>

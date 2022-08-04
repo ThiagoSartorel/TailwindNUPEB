@@ -14,6 +14,7 @@ export default function GridNoticia(props) {
       </div>
       <div>
         <img
+          alt=""
           className="banner w-full h-80 sm:h-96 lg:h-64"
           src={process.env.FILESRV + props.image}
         ></img>

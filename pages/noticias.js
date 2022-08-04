@@ -22,6 +22,7 @@ function Post(props) {
         </div>
         <div>
           <img
+            alt=""
             className="banner w-full h-80 sm:h-96 lg:h-64"
             src={props.image}
           ></img>
@@ -50,7 +51,7 @@ export default function Noticias(props) {
     }
   }
 
-  function getFiltro() {
+  function GetFiltro() {
     useEffect(() => {
       if (typeof document != "undefined") {
         var valueSelect = document.getElementById("selectFiltro").value;
@@ -132,7 +133,7 @@ export default function Noticias(props) {
         </form>
 
         <div className="mb-16 container mx-auto px-4 sm:px-2 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-          {getFiltro()}
+          {GetFiltro()}
         </div>
       </div>
     </div>

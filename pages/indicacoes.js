@@ -15,7 +15,7 @@ export default function Home(props) {
     }
   }
   
-  function getRecommendation() {
+  function GetRecommendation() {
     useEffect(() => {
       if (typeof document != "undefined") {
         var valueSelect = document.getElementById("select").value;
@@ -50,7 +50,7 @@ export default function Home(props) {
         </div>
 
         <div className="divide-y divide-slate-100">
-          <article>{getRecommendation()}</article>
+          <article>{GetRecommendation()}</article>
         </div>
       </div>
     </>

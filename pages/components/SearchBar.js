@@ -9,9 +9,6 @@ export default function Search(){
           placeholder='Search'
         />
       </div>
-      <div>
-        <BsSearch />
-      </div>
     </div>
   </div>
   );

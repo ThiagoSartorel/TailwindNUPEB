@@ -12,7 +12,7 @@ export default function Calendario(props) {
     }
   }
 
-  function getEventos() {
+  function GetEventos() {
     var eventos = props.eventos
     eventos = eventos.filter(evento => evento.new_category_id == 1);
 
@@ -57,7 +57,7 @@ export default function Calendario(props) {
               </div>
               <hr className="mb-4"></hr>
               <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 px-4 gap-4">
-                {getEventos()}
+                {GetEventos()}
               </div>
             </div>
           </div>

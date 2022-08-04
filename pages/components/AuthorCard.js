@@ -70,34 +70,34 @@ export default function AuthorCard(props) {
           <div className="mb-4 text-sm tracking-wide text-gray-800 h-10">{props.bio}</div>
           
           <div className="flex items-center space-x-3">
-            <a id="github" hidden href={props.github} target="_blank">
+            <a id="github" hidden href={props.github}  >
               <AiFillGithub />
             </a>
-            <a id="youtube" hidden href={props.youtube} target="_blank">
+            <a id="youtube" hidden href={props.youtube}  >
               <AiFillYoutube />
             </a>
-            <a id="twitter" hidden href={props.twitter} target="_blank">
+            <a id="twitter" hidden href={props.twitter}  >
               <AiFillTwitterCircle />
             </a>
-            <a id="telephone" hidden href={props.phone} target="_blank">
+            <a id="telephone" hidden href={props.phone}  >
               <AiFillPhone />
             </a>
-            <a id="whatsapp" hidden href={props.whatsapp} target="_blank">
+            <a id="whatsapp" hidden href={props.whatsapp}  >
               <AiOutlineWhatsApp />
             </a>
-            <a id="facebook" hidden href={props.facebook} target="_blank">
+            <a id="facebook" hidden href={props.facebook}  >
               <AiFillFacebook />
             </a>
-            <a id="instagram" hidden href={props.instagram} target="_blank">
+            <a id="instagram" hidden href={props.instagram}  >
               <AiFillInstagram />
             </a>
-            <a id="linkedin" hidden href={props.linkedin} target="_blank">
+            <a id="linkedin" hidden href={props.linkedin}  >
               <AiFillLinkedin />
             </a>
-            <a id="email" hidden href={props.email} target="_blank">
+            <a id="email" hidden href={props.email}  >
               <AiOutlineMail />
             </a>
-            <a id="website" hidden href={props.global} target="_blank">
+            <a id="website" hidden href={props.global}  >
               <AiOutlineGlobal />
             </a>
           </div>

@@ -3,9 +3,10 @@ import HtmlParser from 'react-html-parser';
 import { useEffect } from 'react'
 
 export default function Home(props) {
-  const img = "background-image: url(" + process.env.BACKEND + "showFile/" + props.id.news[0].file_id + ")"
+  
   useEffect(() => {
     if (typeof document != 'undefined') {
+      const img = "background-image: url(" + process.env.BACKEND + "showFile/" + props.id.news[0].file_id + ")"
       document.getElementById("imagem").style = img;
     }
   })
@@ -14,18 +15,18 @@ export default function Home(props) {
     <>
 
       <div className="mx-5 sm:mx-20 md:mx-30 lg:mx-48 min-h-screen mb-16 pt-12">
-        <h1 className="titulo-principal">{props.id.news[0].title}</h1>
+        <h1 className="titulo-principal">{"props.id.news[0].title"}</h1>
         <div className="w-full py-2 px-4 flex flex-col">
           <div className="w-full">
-            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{props.dataNoticia}</span> por <span className="text-blue-800"><a href={"../profiles/" + props.id.news[0].author.id}> {props.id.news[0].author.name}</a></span></span>
+            <span className="text-gray-500 mb-6">Publicado em <span className="text-blue-800">{"props.dataNoticia"}</span> por <span className="text-blue-800"><a href={"../profiles/" + "props.id.news[0].author.id"}> {"props.id.news[0].author.name"}</a></span></span>
           </div>
           <div className="w-full space-x-4 flex flex-row-reverse">
-            <span className="bg-gray-600 text-white rounded-md text-sm px-2 py-1 ml-4">{props.id.news[0].newCategory.category_name}</span>
+            <span className="bg-gray-600 text-white rounded-md text-sm px-2 py-1 ml-4">{"props.id.news[0].newCategory.category_name"}</span>
           </div>
         </div>
         <div id="imagem" className="lg:w-full lg:h-[650px] imagem-principal" />
-        <d className="text-md text-gray-500">{HtmlParser(props.id.news[0].description)}</d>
-        <div>{HtmlParser(props.id.news[0].content)}</div>
+        <d className="text-md text-gray-500">{HtmlParser("props.id.news[0].description")}</d>
+        <div>{HtmlParser("props.id.news[0].content")}</div>
       </div>
     </>
   );
@@ -49,8 +50,7 @@ export async function getStaticProps(context) {
   var year = dataNoticia.getFullYear();
 
   var dataNoticia = day + ", " + date + " de " + month + " de " + year
-
-  // Pass data to the page via props
+  //Pass data to the page via props
   return { props: { id, dataNoticia } }
 }
 
