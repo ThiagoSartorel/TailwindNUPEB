@@ -7,14 +7,12 @@ import HtmlParser from "react-html-parser";
 const imagens = [];
 
 export default function Home(props) {
-  for (let i = 0; i < props.banner.length; i++) {
-    imagens.push(props.banner[i].url);
-  }
+
   var contador = 0;
   return (
     <>
       <div className="pt-10">
-        <Slider key={imagens} imagens={imagens} />
+        <Slider key={imagens} />
       </div>
 
       <div className="text-center p-6 bg-slate-500 bg-opacity-10">
