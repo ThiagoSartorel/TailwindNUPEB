@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   env:{
-    BACKEND: 'http://api.uniplaclages.edu.br:3333/',
-    FILESRV: 'http://api.uniplaclages.edu.br:3333/showFile/'
+    BACKEND: 'http://api.uniplaclages.edu.br:40001/',
+    FILESRV: 'http://api.uniplaclages.edu.br:40001/showFile/'
   }
 }
 
